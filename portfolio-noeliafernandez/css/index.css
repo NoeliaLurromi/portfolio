@@ -89,7 +89,7 @@
     body {
       min-height: 100vh;
       font-size: 100%;
-      font-family: Helvetica, Arial, sans-serif;
+      font-family: Inter, Helvetica, Arial, sans-serif;
       color: var(--negro);
       
       -webkit-hyphens: auto;
@@ -99,13 +99,18 @@
       -webkit-font-smoothing: antialiased;
  
       -moz-osx-font-smoothing: grayscale;
+      background-color: #FFF2F1;
     } 
+
+
+    /* CUSTOM PROPERTIES */
+    :root {}
 
     /* AQUÍ EMPIEZA */
     .Header{
         width: 100%;
         height: 5rem;
-        background-color: aquamarine;
+        /* background-color: aquamarine; */
 
         display: flex;
         flex-flow: row nowrap;
@@ -116,9 +121,9 @@
     }
     
     .Header-logo{
-        width: 10%;
+        width: 5%;
         min-height: 3rem;
-        background-color: blue;
+        /* background-color: blue; */
 
         padding: 1rem;
     }
@@ -126,7 +131,7 @@
     .Header-nav{
         width: 30%;
         min-height: 3rem;
-        background-color: blue;
+        /* background-color: blue; */
 
         display: flex;
         flex-flow: row nowrap;
@@ -136,16 +141,20 @@
         padding: 1rem;
     }
 
-    .Header-item{
-        width: 20%;
+    .Header-item{}
+
+    .Header-link{
+        width: 90%;
         min-height: 2rem;
-        background-color: lightblue;
+        /* background-color: lemonchiffon; */
+
+        margin: auto;
     }
 
     .Main{
         width: 100%;
         min-height: 90vh;
-        background-color: pink;
+        /* background-color: pink; */
 
         display: flex;
         flex-flow: column nowrap;
@@ -153,18 +162,43 @@
         align-items: center;
     }
 
-    .Main-h1{
-        width: 50%;
+    .Main-image{
+        width: 100%;
+        min-height: 30rem;
+
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+
+        background-image: url(../assets/lurromi-abstract-3d.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .Main-h2{
+        width: 90%;
         min-height: 10rem;
-        background-color: purple;
+        /* background-color: purple; */
 
         margin: 0 0 3rem 0;
+
+        font-family: Salernomi J;
+        font-size: 12.5rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -0.5rem;
+
+        text-align: center;
+        color: #E63E38;
     }
 
     .Main-content{
         width: 50%;
         min-height: 8rem;
-        background-color: brown;
+        /* background-color: brown; */
 
         display: flex;
         flex-flow: column nowrap;
@@ -173,23 +207,42 @@
     }
 
     .Main-p-bold{
-        width: 50%;
-        min-height: 2rem;
-        background-color: khaki;
+        width: 55%;
+        min-height: 1rem;
+        /* background-color: khaki; */
 
-        margin: 0 0 2rem 0;
+        margin: 0 0 1rem 0;
+
+        font-family: Inter;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+
+        color: #E63E38;
+
     }
 
     .Main-p{
-        width: 50%;
+        width: 55%;
         min-height: 2rem;
-        background-color: khaki;
+        /* background-color: khaki; */
+
+        font-family: Inter;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 500;
+        text-transform: uppercase;
+        text-align: center;
+
+        color: #E63E38;
     }
 
     .Projects{
         width: 100%;
         min-height: 150vh;
-        background-color: lightgreen;
+        /* background-color: lightgreen; */
 
         display: flex;
         flex-flow: column nowrap;
@@ -200,77 +253,115 @@
     .Projects-h2{
         width: 50%;
         min-height: 4rem;
-        background-color: saddlebrown;
+        /* background-color: saddlebrown; */
 
         margin:  0 0 3rem 0;
+
+        font-family: Salernomi J;
+        font-size: 3.75rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 105%;
+        letter-spacing: -0.2rem;
+
+
+        color: #E63E38;
+        text-align: center;
     }
 
     .Projects-container{
         width: 90%;
         min-height: 20rem;
-        background-color: lightseagreen;
+        /* background-color: lightseagreen; */
 
-        margin: 0 0 3rem 0;
+        margin: 0 0 2rem 0;
     }
 
     .Project-image{
         width: 100%;
-        min-height: 16rem;
-        background-color: orange;
+        min-height: 30rem;
+        background-color: #E63E38;
 
-        margin: 0 0 3rem 0;
+        margin: 0 0 1rem 0;
+
+        border-radius: 2rem;
     }
 
     .Project-title{
         width: 100%;
         min-height: 3rem;
-        background-color: seagreen;
+        /* background-color: seagreen; */
+
+        font-family: Salernomi J;
+        font-size: 2.5rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.8rem;
+        letter-spacing: -0.1rem;
+        
+        color: #E63E38;
     }
     .Project-tags{
-        width: 10%;
+        width: 80%;
         min-height: 3rem;
-        background-color: burlywood;
+        /* background-color: burlywood; */
+
+        font-family: Inter;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.875rem; 
+
+        color: #E63E38;
     }
 
     .Projects-container-pair{
         width: 90%;
         min-height: 20rem;
-        background-color: lightpink;
+        /* background-color: lightpink; */
 
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
         align-content: center;
+
+        margin: 0 0 2rem 0;
     }
 
     .Project-container-squared{
-        width: 40%;
+        width: 48%;
         min-height: 18rem;
-        background-color: gray;
+        /* background-color: gray; */
     }
 
 
     .Aboutme{
-        width: 100%;
-        min-height: 40rem;
+        width: 90%;
+        min-height: 34rem;
         background-color: purple;
 
-       display: flex;
-       flex-flow: row wrap;
-       justify-content: space-between;
-       align-content: center;
+        border-radius: 2rem;
+
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-content: center;
+
+        margin: auto;
     }
 
     .Aboutme-img{
         width: 50%;
-        min-height: 40rem;
+        min-height: 34rem;
         background-color: blanchedalmond;
+
+        border-radius: 2rem;
     }
 
     .Aboutme-text{
         width: 50%;
-        min-height: 40rem;
-        background-color: yellow;
+        min-height: 34rem;
+        background-color: #E63E38;
 
         display: flex;
         flex-flow: column nowrap;
@@ -278,75 +369,121 @@
         align-items: left;
 
         padding: 3rem;
+
+        border-radius: 0 2rem 2rem 0 ;
     }
 
     .Aboutme-h2{
-        width: 50%;
+        width: 80%;
         min-height: 3rem;
-        background-color: lightcoral;
+        /* background-color: lightcoral; */
 
-        margin: 0 0 3rem 0;
+        margin: 0 0 3rem 2rem;
+
+        font-family: Salernomi J;
+        font-size: 3.5rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 105%;
+        letter-spacing: -0.1rem;
+
+        color: #FFF2F1;
     }
 
     .Aboutme-h3{
-        width: 50%;
+        width: 80%;
         min-height: 3rem;
-        background-color: red;
+        /* background-color: red; */
 
-        margin: 0 0 3rem 0;
+        margin: 0 0 3rem 2rem;
+
+        font-family: Salernomi J;
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 105%;
+
+        color: #FFF2F1;
     }
 
     .Aboutme-button{
-        width: 20%;
-        min-height: 1rem;
-        background-color: goldenrod;
+        width: 30%;
+        min-height: 2rem;
+        background-color: #FFF2F1;
+
+        border-radius: 2rem;
+
+        margin: 0 0 3rem 2rem;
+        text-align: center;
     }
 
     .Contact{
         width: 100%;
         min-height: 10rem;
-        background-color: orangered;
+        /* background-color: orangered; */
 
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
         align-items: center;
 
-        padding: 3rem;
+        padding: 2rem;
     }
     .Contact-text{
-        width: 30%;
+        width: 50%;
         min-height: 3rem;
-        background-color: bisque;
+        /* background-color: bisque; */
+
+        font-family: Salernomi J;
+        font-size: 9.375rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 105%;
+        letter-spacing: -0.5rem;
+
+        color: #E63E38;
     }
     .Contact-icon{
         width: 10%;
-        min-height: 3rem;
-        background-color: bisque;
+        min-height: 2rem;
+        /* background-color: bisque; */
+
+        padding: 1rem;
+    }
+
+    .Contact-link{
+        min-height: 2rem;
+        color: #E63E38;
     }
 
     .Footer{
         width: 100%;
-        min-height: 6rem;
-        background-color: lightskyblue;
+        min-height: 4rem;
+        /* background-color: lightskyblue; */
 
         display: flex;
-        flex-flow: row nowrap;
+        flex-flow: row wrap;
         justify-content: space-between;
-        align-items: flex-end;
+        align-content: center;
 
-        padding: 3rem;
+        padding: 2rem;
     }
     .Footer-p{
-        width: 15%;
-        min-height: 3rem;
-        background-color: lavender 
+        width: 10%;
+        min-height: 2rem;
+        /* background-color: lavender; */
+        
+        color: #E63E38;
+        font-family: Inter;
+        font-weight: 400;
+        font-size: small;
+        text-transform: uppercase;
     }
 
     .Footer-redes{
-        width: 15%;
-        min-height: 3rem;
-        background-color: lavender;
+        width: 10%;
+        min-height: 2rem;
+        /* background-color: lavender; */
 
         display: flex;
         flex-flow: row nowrap;
@@ -356,9 +493,18 @@
 
     .Footer-red{
         width: 15%;
-        min-height: 3rem;
-        background-color: greenyellow 
+        min-height: 2rem;
+        /* background-color: greenyellow;  */
+
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
     }
     
-
+    .Red-single{
+        width: 1.2rem;
+        min-height: 1.5rem;
+        color: #E63E38;
+    }
 
