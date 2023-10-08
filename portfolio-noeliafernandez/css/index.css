@@ -139,7 +139,7 @@ body {
 /* ----- Header ----- */
     .Header{
         width: 100%;
-        height: 5rem;
+        height: 4rem;
         /* background-color: aquamarine; */
 
         display: flex;
@@ -149,41 +149,54 @@ body {
 
         padding: 3rem 2rem;
     }
-    .Header-logo{
-        max-height: 5rem;
-        background-color: blue;
-        padding: 1rem;
+    .Header-wrapper{
+        width: 95%;
+        min-height: 4rem;
+        /* background-color: rebeccapurple; */
+        margin: 0 auto;
 
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: center;
-        align-items: center;
-    }
-    .Header-a{
-        max-height: 1rem;
-    }
-    .Header-nav{
-        width: 40%;
-        min-height: 3rem;
-        /* background-color: blue; */
-        padding: 1rem;
-    }
-    .Header-ul{
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
         align-items: center;
+    }
+    .Header-logo{
+       padding: 2rem 0;
+    }
+    .Header-img{
+        max-height: 3rem;
+    }
+
+    .Header-nav{
+       /* background-color: aliceblue; */
+    }
+    .Header-ul{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+
         text-align: center;
         font-family: var(--font-p);
 
+        gap: 2rem;
     }
 
-    .Header-li{
-        width: 90%;
-        min-height: 2rem;
-        /* background-color: lemonchiffon; */
+    .Header-li{}
 
-        margin: auto;
+    .Header-a{
+        font-family: Inter;
+        font-size: 0.8rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        
+        border-radius: 2.5rem;
+        border: 1.5px solid var(--naranja);
+        padding: 0.5rem 1rem; 
+
+        color: #E63E38;
+        text-transform: uppercase;
     }
 /* ---- Fin header ----- */
 
@@ -241,6 +254,8 @@ body {
         flex-flow: column nowrap;
         justify-content: center;
         align-items: center;
+
+        margin: 0 0 3rem 0;
     }
 
     .Main-p-bold{
