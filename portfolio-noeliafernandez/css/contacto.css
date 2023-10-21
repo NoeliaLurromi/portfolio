@@ -240,20 +240,20 @@ body {
   }
   .Main-titular{
   
-    margin: 0 auto 4rem;
+    margin: 4rem ;
     padding: 2rem;
-  
   }
-  
+
+ 
   .Main-h1{
-    font-family: Salernomi J;
+    font-family: var(--font-h);
     font-size: 9rem;
     font-style: normal;
     font-weight: 400;
     line-height: 105%; /* 9.84375rem */
     letter-spacing: -0.5rem;
   
-    color: #E63E38;
+    color: var(--naranja);
   }
   
   .Main-columnas{
@@ -265,7 +265,7 @@ body {
     justify-content: space-between;
     align-content: center;
   
-    margin: 0 auto 7rem;
+    margin: 0 auto 5rem;
   }
   
   .Main-columna{
