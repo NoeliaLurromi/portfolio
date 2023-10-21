@@ -163,6 +163,7 @@ body {
     .Header-logo{
        padding: 1rem 1rem 1rem 0;
     }
+
     .Header-img{
         max-height: 3rem;
     }
@@ -170,6 +171,14 @@ body {
     .Header-nav{
        /* background-color: aliceblue; */
     }
+
+    .Header-nav.isActive{}
+
+    .Header-button{
+        display: none;
+        max-height: 2.5rem;
+      }
+
     .Header-ul{
         display: flex;
         flex-flow: row wrap;
@@ -201,7 +210,32 @@ body {
         background-color: var(--naranja);
         color: var(--salmon);
     }
-/* ---- Fin header ----- */
+
+/* Breakpoints Header */
+    @media (max-width: 769px){
+        .Header-nav{
+          /* display: none; */
+          width: 100%;
+          position: absolute;
+          top: 8rem;
+          right: 0;
+      
+          height: 0;
+          overflow: hidden;
+      
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: center;
+          align-items: center;
+      
+          transition: all 0.5s ;
+        }
+        .Header-button{
+          display: block;
+          cursor: pointer;
+        }
+    }
+      
 
 /* ----- Main ----- */
     .Main{
@@ -499,16 +533,6 @@ body {
         color: var(--salmon);
     }
 
-    .Aboutme-button{
-        width: 30%;
-        /* min-height: 2rem; */
-        background-color: var(--salmon);
-
-        border-radius: 2rem;
-
-        margin: 0 0 3rem 2rem;
-        text-align: center;
-    }
 /* Breakpoints Aboutme */
     @media screen and (max-width: 768px){
         .Aboutme-text{
