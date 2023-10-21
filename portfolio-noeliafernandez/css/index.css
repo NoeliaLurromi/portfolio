@@ -126,7 +126,7 @@ body {
 }
 
 
-    /* CUSTOM PROPERTIES */
+ /* CUSTOM PROPERTIES */
     :root {
         /* Colores */
         --naranja: #E63E38;
@@ -161,7 +161,7 @@ body {
         align-items: center;
     }
     .Header-logo{
-       padding: 2rem 0;
+       padding: 1rem 1rem 1rem 0;
     }
     .Header-img{
         max-height: 3rem;
@@ -182,10 +182,8 @@ body {
         gap: 2rem;
     }
 
-    .Header-li{}
-
     .Header-a{
-        font-family: Inter;
+        font-family: var(--font-p);
         font-size: 0.8rem;
         font-style: normal;
         font-weight: 500;
@@ -195,15 +193,20 @@ body {
         border: 1.5px solid var(--naranja);
         padding: 0.5rem 1rem; 
 
-        color: #E63E38;
+        color: var(--naranja);
         text-transform: uppercase;
+    }
+
+    .Header-a:hover{
+        background-color: var(--naranja);
+        color: var(--salmon);
     }
 /* ---- Fin header ----- */
 
 /* ----- Main ----- */
     .Main{
         width: 100%;
-        min-height: 90vh;
+        /* min-height: 90vh; */
         /* background-color: pink; */
 
         display: flex;
@@ -215,6 +218,8 @@ body {
     .Main-image{
         width: 100%;
         min-height: 30rem;
+
+        margin: 4rem 0;
 
         display: flex;
         flex-flow: column nowrap;
@@ -228,8 +233,8 @@ body {
     }
 
     .Main-h2{
-        width: 90%;
-        min-height: 10rem;
+        /* width: 90%; */
+        /* min-height: 10rem; */
         /* background-color: purple; */
 
         margin: 0 0 3rem 0;
@@ -246,8 +251,8 @@ body {
     }
 
     .Main-content{
-        width: 50%;
-        min-height: 8rem;
+        width: 100%;
+        /* min-height: 8rem; */
         /* background-color: brown; */
 
         display: flex;
@@ -260,7 +265,7 @@ body {
 
     .Main-p-bold{
         width: 55%;
-        min-height: 1rem;
+        /* min-height: 1rem; */
         /* background-color: khaki; */
 
         margin: 0 0 1rem 0;
@@ -272,30 +277,49 @@ body {
         text-transform: uppercase;
         text-align: center;
 
-        color: #E63E38;
-
+        color: var(--naranja);
     }
 
     .Main-p{
-        width: 55%;
-        min-height: 2rem;
+        width: 30%;
+        /* min-height: 2rem; */
         /* background-color: khaki; */
 
-        font-family: Inter;
+        font-family: var(--font-p);
         font-size: 1rem;
         font-style: normal;
         font-weight: 500;
         text-transform: uppercase;
         text-align: center;
 
-        color: #E63E38;
+        color: var(--naranja);
     }
 
+/* Breakpoints Main */
+    @media screen and (max-width: 768px){
+        .Main-h2{ 
+            line-height: 1em;
+        }
+        .Main-p{
+            width: 60%;
+        }
+    }
+    @media screen and (max-width: 480px){
+        .Main-h2{ 
+            font-size: 8rem;
+        }
+        .Main-p{
+            width: 90%;
+        }
+    }
+
+
+/* ----- Projects ----- */
     .Projects{
         width: 100%;
-        min-height: 150vh;
+        /* min-height: 150vh; */
         /* background-color: lightgreen; */
-
+        margin-top: 6rem;
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
@@ -303,27 +327,25 @@ body {
 
     }
     .Projects-h2{
-        width: 50%;
-        min-height: 4rem;
+        width: 100%;
+        /* min-height: 4rem; */
         /* background-color: saddlebrown; */
 
-        margin:  0 0 3rem 0;
-
-        font-family: Salernomi J;
-        font-size: 3.75rem;
+        margin:  0 auto 3rem 0;
+        
+        font-size: 9rem;
         font-style: normal;
         font-weight: 400;
         line-height: 105%;
-        letter-spacing: -0.2rem;
+        letter-spacing: -0.5rem;
 
-
-        color: #E63E38;
+        color: var(--naranja);
         text-align: center;
     }
 
     .Projects-container{
         width: 90%;
-        min-height: 20rem;
+        /* min-height: 20rem; */
         /* background-color: lightseagreen; */
 
         margin: 0 0 2rem 0;
@@ -331,17 +353,18 @@ body {
 
     .Project-image{
         width: 100%;
-        min-height: 30rem;
-        background-color: #E63E38;
+        /* min-height: 30rem; */
+        background-color: var(--naranja);
 
-        margin: 0 0 1rem 0;
+        margin: 0 0 2rem 0;
 
         border-radius: 2rem;
+        object-fit: cover;
     }
 
     .Project-title{
         width: 100%;
-        min-height: 3rem;
+        /* min-height: 3rem; */
         /* background-color: seagreen; */
 
         font-family: Salernomi J;
@@ -350,12 +373,14 @@ body {
         font-weight: 400;
         line-height: 1.8rem;
         letter-spacing: -0.1rem;
+
+        margin: 0 0 0.5rem 0;
         
-        color: #E63E38;
+        color: var(--naranja);
     }
     .Project-tags{
         width: 80%;
-        min-height: 3rem;
+        /* min-height: 3rem; */
         /* background-color: burlywood; */
 
         font-family: Inter;
@@ -364,33 +389,49 @@ body {
         font-weight: 700;
         line-height: 1.875rem; 
 
-        color: #E63E38;
+        color: var(--naranja);
     }
 
     .Projects-container-pair{
         width: 90%;
-        min-height: 20rem;
+        /* min-height: 20rem; */
         /* background-color: lightpink; */
 
         display: flex;
-        flex-flow: row wrap;
+        flex-flow: row nowrap;
         justify-content: space-between;
         align-content: center;
 
         margin: 0 0 2rem 0;
     }
 
+    @media screen and (max-width: 768px){
+        .Projects{ 
+            flex-flow:column wrap; 
+        }
+        .Projects-container-pair{
+            flex-flow: row wrap;
+            justify-content: center;
+        }
+    }
+
     .Project-container-squared{
         width: 48%;
-        min-height: 18rem;
+        /* min-height: 18rem; */
         /* background-color: gray; */
+    }
+
+    @media screen and (max-width: 768px){
+        .Project-container-squared{
+            width: 90%;
+        }
     }
 
 
     .Aboutme{
         width: 90%;
-        min-height: 34rem;
-        background-color: purple;
+        /* min-height: 34rem; */
+        /* background-color: purple; */
 
         border-radius: 2rem;
 
@@ -404,17 +445,18 @@ body {
 
     .Aboutme-img{
         width: 50%;
-        min-height: 34rem;
-        background-color: blanchedalmond;
+        /* min-height: 34rem; */
+        /* background-color: blanchedalmond; */
 
-        border-radius: 2rem;
         object-fit: cover;
+        border-radius:2rem 0 0 2rem ;
     }
+
 
     .Aboutme-text{
         width: 50%;
-        min-height: 34rem;
-        background-color: #E63E38;
+        /* min-height: 34rem; */
+        background-color: var(--naranja);
 
         display: flex;
         flex-flow: column nowrap;
@@ -426,53 +468,69 @@ body {
         border-radius: 0 2rem 2rem 0 ;
     }
 
-    .Aboutme-h2{
+    .Aboutme-h3{
         width: 80%;
-        min-height: 3rem;
+        /* min-height: 3rem; */
         /* background-color: lightcoral; */
 
         margin: 0 0 3rem 2rem;
 
-        font-family: Salernomi J;
         font-size: 3.5rem;
         font-style: normal;
         font-weight: 400;
         line-height: 105%;
         letter-spacing: -0.1rem;
 
-        color: #FFF2F1;
+        color: var(--salmon);
     }
 
-    .Aboutme-h3{
+    .Aboutme-p{
         width: 80%;
-        min-height: 3rem;
+        /* min-height: 3rem; */
         /* background-color: red; */
 
         margin: 0 0 3rem 2rem;
 
-        font-family: Salernomi J;
         font-size: 2rem;
         font-style: normal;
         font-weight: 400;
         line-height: 105%;
 
-        color: #FFF2F1;
+        color: var(--salmon);
     }
 
     .Aboutme-button{
         width: 30%;
-        min-height: 2rem;
-        background-color: #FFF2F1;
+        /* min-height: 2rem; */
+        background-color: var(--salmon);
 
         border-radius: 2rem;
 
         margin: 0 0 3rem 2rem;
         text-align: center;
     }
+/* Breakpoints Aboutme */
+    @media screen and (max-width: 768px){
+        .Aboutme-text{
+            width: 90%;
+        }
 
+        .Aboutme-img{
+            width: 90%;
+        }
+    }
+    @media screen and (max-width: 480px){
+        .Aboutme{
+            border-radius: 2rem ;
+        }
+     
+        
+    }
+
+/* ----- Contact ----- */
     .Contact{
         width: 100%;
-        min-height: 10rem;
+        /* min-height: 10rem; */
         /* background-color: orangered; */
 
         display: flex;
@@ -482,72 +540,86 @@ body {
 
         padding: 2rem;
     }
+
     .Contact-text{
-        width: 50%;
-        min-height: 3rem;
+        /* width: 50%; */
+        /* min-height: 3rem; */
         /* background-color: bisque; */
 
-        font-family: Salernomi J;
-        font-size: 9.375rem;
+        font-size: 9rem;
         font-style: normal;
         font-weight: 400;
         line-height: 105%;
         letter-spacing: -0.5rem;
 
-        color: #E63E38;
+        color: var(--naranja);
     }
+
     .Contact-icon{
         width: 10%;
-        min-height: 2rem;
+        /* min-height: 2rem; */
         /* background-color: bisque; */
-
         padding: 1rem;
+        stroke-width:"0.8";
+        color: var(--naranja);
     }
 
-    .Contact-link{
-        min-height: 2rem;
-        color: #E63E38;
+/* Breakpoints Contact */
+    @media screen and (max-width: 769px){
+        .Contact-text{
+            font-size: 7rem;
+            letter-spacing: -0.2rem;
+           }
+    }
+
+    @media screen and (max-width: 480px){
+       .Contact-text{
+        font-size: 5rem;
+        letter-spacing: -0.2rem;
+       }
+       
     }
 
 /* ----- Footer ----- */
     .Footer{
         width: 100%;
-        min-height: 4rem;
+        /* min-height: 4rem; */
         /* background-color: lightskyblue; */
 
         display: flex;
-        flex-flow: row wrap;
+        flex-flow: row nowrap;
         justify-content: space-between;
         align-content: center;
 
         padding: 2rem;
     }
     .Footer-p{
-        width: 10%;
-        min-height: 2rem;
+        /* width: 35%; */
+        /* min-height: 2rem; */
         /* background-color: lavender; */
         
-        color: #E63E38;
-        font-family: Inter;
+        color:var(--naranja);
+        font-family: var(--font-p);
         font-weight: 400;
         font-size: small;
         text-transform: uppercase;
     }
 
     .Footer-redes{
-        width: 10%;
-        min-height: 2rem;
+        /* width: 10%; */
+        /* min-height: 2rem; */
         /* background-color: lavender; */
 
         display: flex;
-        flex-flow: row wrap;
+        flex-flow: row nowrap;
         justify-content: space-between;
         align-items: center;
+
+        gap: 2rem;
     }
 
     .Footer-red{
-        width: 15%;
-        min-height: 2rem;
+        /* min-height: 2rem; */
         /* background-color: greenyellow;  */
 
         display: flex;
@@ -555,10 +627,44 @@ body {
         justify-content: center;
         align-items: center;
     }
-    
+
+    .Red-link{
+        padding: 0.3rem;
+    }
     .Red-single{
         width: 1.2rem;
-        min-height: 1.5rem;
-        color: #E63E38;
+        /* min-height: 1.5rem; */
+        color: var(--naranja);
+    }
+
+
+/* Breakpoints footer*/
+    @media screen and (max-width: 769px){
+        .Footer{ 
+            flex-flow: row wrap;
+        }
+        .Footer-p{ 
+            width: 50%; 
+            margin: 0 auto 1.5rem;
+        }
+        .Footer-redes{ 
+            width: 80%; 
+            margin: 0 auto;
+        }
+    }
+
+    @media screen and (max-width: 480px){
+        .Footer{ 
+            flex-flow: row wrap;
+        }
+        .Footer-p{ 
+            width: 100%; 
+            margin: 0 auto 1.5rem;
+            text-align: center;
+        }
+        .Footer-redes{
+            justify-content: space-around;
+
+        }
     }
 

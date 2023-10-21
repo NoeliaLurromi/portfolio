@@ -2,7 +2,7 @@
     Su estructura es la siguiente:
     - Header con menú de navegación
     - Contenido principal con portada, proyectos, sobre mí y contacto
-    -Footer con datos y redes sociales
+    - Footer con datos y redes sociales
  -->
 
 <!DOCTYPE html>
@@ -12,6 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lurromi</title>
     <link rel="stylesheet" href="css/index.css">
+    <link rel="icon" type="image/png" href="assets/favicon-lurromi-web.png"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -44,6 +45,7 @@
 
 <!-- Contenido principal de la web -->
     <main class="Main">
+    <!-- Hero -->
         <div class="Main-image">
             <h2 class="Main-h2">Soy Lurromi</h2>
         </div>
@@ -53,23 +55,31 @@
             <p class="Main-p">Aunque si le preguntas a mi madre ella dice que hago cosas bonitas y eso también está bien.</p>
         </div> 
 
-<!-- Sección proyectos -->
+    <!-- Sección proyectos -->
     <section class="Projects">
         <h2 class="Projects-h2">Proyectos seleccionados</h2>
-        <article class="Projects-container">
-            <img title="Imagen de prueba" class="Project-image" loading="lazy"></img>
-            <p class="Project-title">Proyecto 1</p>
-            <p class="Project-tags">BRANDING // ILUSTRACIÓN</p>
-        </article>
-
+        
         <div class="Projects-container-pair">
             <article class="Project-container-squared">
-                <img title="Imagen de prueba" class="Project-image" loading="lazy"></img>
+                <img src="assets/imagen-prueba" alt="Imagen de prueba" class="Project-image" loading="lazy"></img>
                 <p class="Project-title">Proyecto 2</p>
                 <p class="Project-tags">BRANDING // ILUSTRACIÓN</p>
             </article>
             <article class="Project-container-squared">
-                <img title="Imagen de prueba" class="Project-image" loading="lazy"></img>
+                <img src="assets/imagen-prueba" title="Imagen de prueba" class="Project-image" loading="lazy"></img>
+                <p class="Project-title">Proyecto 3</p>
+                <p class="Project-tags">BRANDING // ILUSTRACIÓN</p>
+            </article>
+        </div>
+
+        <div class="Projects-container-pair">
+            <article class="Project-container-squared">
+                <img src="assets/imagen-prueba" alt="Imagen de prueba" class="Project-image" loading="lazy"></img>
+                <p class="Project-title">Proyecto 2</p>
+                <p class="Project-tags">BRANDING // ILUSTRACIÓN</p>
+            </article>
+            <article class="Project-container-squared">
+                <img src="assets/imagen-prueba"title="Imagen de prueba" class="Project-image" loading="lazy"></img>
                 <p class="Project-title">Proyecto 3</p>
                 <p class="Project-tags">BRANDING // ILUSTRACIÓN</p>
             </article>
@@ -78,12 +88,10 @@
 
 <!-- Sección sobre mí -->
     <div class="Aboutme">
-        <picture title="Imagen de prueba" class="Aboutme-img">
-            <img src="assets/imagen-prueba" alt="Imagen de prueba" loading="lazy">
-        </picture>
+        <img class="Aboutme-img" src="assets/lurromi-about" alt="Imagen de Lurromi" loading="lazy">
         <div class="Aboutme-text">
-            <h2 class="Aboutme-h2">Puedes saber más sobre mí haciendo click aquí.</h2>
-            <h3 class="Aboutme-h3">(Sí, esto es un clickbait de manual)</h3>
+            <h2 class="Aboutme-h3">Puedes saber más sobre mí haciendo click aquí.</h2>
+            <h3 class="Aboutme-p">(Sí, esto es un clickbait de manual)</h3>
             <button class="Aboutme-button"></button>
         </div>
     </div>
@@ -91,8 +99,8 @@
   <!-- Sección contacto  -->
     <div class="Contact">
         <p class="Contact-text">¿Hablamos?</p>
-        <a class="Contact-icon" href="mailto:soylurromi@gmail.com" title="Ir al contacto" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" stroke-width="0.8" viewBox="0 0 24 24" color="#E63E38"><path stroke="#E63E38" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" d="M6 19 19 6m0 0v12.48M19 6H6.52"></path></svg>
+        <a href="#" class="Contact-icon" title="Contactar">
+            <svg class="Contact-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path stroke="#E63E38" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" d="M6 19 19 6m0 0v12.48M19 6H6.52"></path></svg>
         </a>
     </div>
 </main>
@@ -100,7 +108,7 @@
 <!-- Pie de página -->
 <footer class="Footer">
         <p class="Footer-p">all rights reserved <br><b>&copy; 2023</b></br> </p>
-        <p class="Footer-p">design & dev by <b>lurromi</b> </p>
+        <p class="Footer-p">design & dev by <br><b>lurromi</b><br> </p>
         <ul class="Footer-redes">
             <li class="Footer-red">
                 <a href="https://www.linkedin.com/in/lurromi/" title="Icono LinkedIn"class="Red-link">
@@ -128,6 +136,3 @@
 
 </body>
 </html>
-
-
-<!-- Breakpoints -->
