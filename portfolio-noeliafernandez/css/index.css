@@ -347,6 +347,28 @@ body {
         }
     }
 
+/* ----- Scroll images ----- */
+
+.Scroll-outer{
+    overflow: scroll;
+    width: 100%;
+    margin-top: 3rem;
+}
+.Scroll-inner{
+    width: 200rem;
+}
+.Scroll-box{
+    width: 30rem;
+    height: 40rem;
+    float: left;
+    margin: 0 1rem 0 0 ;
+    border-radius: 2rem;
+}
+.Scroll-image{
+    border-radius: 2rem;
+    max-height: 40rem;
+    object-fit: cover;
+}
 
 /* ----- Projects ----- */
     .Projects{
@@ -358,8 +380,12 @@ body {
         flex-flow: column nowrap;
         justify-content: center;
         align-items: center;
-
     }
+
+    .Project-title{
+        width: 100%;
+    }
+
     .Projects-h2{
         width: 100%;
         /* min-height: 4rem; */
@@ -375,7 +401,19 @@ body {
 
         color: var(--naranja);
         text-align: center;
+
+        position: relative;
     }
+    .Projects-deco{
+    
+        position: absolute;
+        z-index: 1;
+        bottom: 0;
+        left: auto;
+        right: 5rem;
+    }
+
+    
 
     .Projects-container{
         width: 90%;
