@@ -1,232 +1,4 @@
-
-
-@charset "UTF-8";
-
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  vertical-align: baseline;
-}
-
-/* Evitamos problemas con las imagenes */
-img, picture, video, iframe, figure {
-  max-width: 100%;
-  width: 100%;
-  display: block;
-}
-
-/* Reseteamos los enlaces para funcionar como cajas... */
-a {
-  display: block;
-  text-decoration: none;
-  color: inherit;
-  font-size: inherit;
-}
-
-/* ... excepto los que se encuentran en párrafos */
-p a {
-  display: inline;
-}
-
-/* Quitamos los puntos de los <li> */
-li {
-  list-style-type: none;
-}
-
-/* Configuramos anclas suaves */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Desactivamos estilos por defecto de las principales etiquetas de texto */
-h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
-  font-size: 1em;
-  font-weight: inherit;
-  font-style: inherit;
-  text-decoration: none;
-  color: inherit;
-}
-
-/* Evitamos problemas con los pseudoelementos de quotes */
-blockquote:before, blockquote:after, q:before, q:after {
-  content: "";
-  content: none;
-}
-
-/* Configuramos el texto que seleccionamos */
-::-moz-selection {
-  background-color: var(--negro);
-  color: var(--blanco);
-}
-::selection {
-  background-color: var(--negro);
-  color: var(--blanco);
-}
-
-/* Nivelamos problemas de tipografías y colocación de formularios */
-form, input, textarea, select, button, label {
-  font-family: inherit;
-  font-size: inherit;
-  -webkit-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto;
-  background-color: transparent;
-  color: inherit;
-  display: block;
-  /* opcional */
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-}
-
-/* Reseteamos las tablas */
-table, tr, td {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/* Evitamos problemas con los SVG */
-svg {
-  width: 100%;
-  display: block;
-  fill: currentColor;
-}
-
-/* Configuramos la tipografía para toda la web */
-body {
-  min-height: 100vh;
-  font-size: 100%;
-  font-family: Salernomi J;
-  font-display: swap;
-  color: var(--negro);
-  background-color: var(--salmon);
-  /* opcional */
-  -webkit-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto;
-  /* opcional */
-  font-smooth: always;
-  /* opcional */
-  -webkit-font-smoothing: antialiased;
-  /* opcional */
-  -moz-osx-font-smoothing: grayscale;
-}
-
-
- /* CUSTOM PROPERTIES */
-    :root {
-        /* Colores */
-        --naranja: #E63E38;
-        --salmon: #FFF2F1;
-        /* Tipografías */
-        --font-h: 'Salernomi J';
-        --font-p: 'Inter';
-    }
-
-/* ----- Header ----- */
-    .Header{
-        width: 100%;
-        height: 4rem;
-        /* background-color: aquamarine; */
-
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
-        align-items: center;
-
-        padding: 3rem 2rem;
-    }
-    .Header-wrapper{
-        width: 95%;
-        min-height: 4rem;
-        /* background-color: rebeccapurple; */
-        margin: 0 auto;
-
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .Header-logo{
-       padding: 1rem 1rem 1rem 0;
-    }
-
-    .Header-img{
-        max-height: 3rem;
-    }
-
-    .Header-nav{
-       /* background-color: aliceblue; */
-    }
-
-    .Header-nav.isActive{}
-
-    .Header-button{
-        display: none;
-        max-height: 2.5rem;
-      }
-
-    .Header-ul{
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-        align-items: center;
-
-        text-align: center;
-        font-family: var(--font-p);
-
-        gap: 2rem;
-    }
-
-    .Header-a{
-        font-family: var(--font-p);
-        font-size: 0.8rem;
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
-        
-        border-radius: 2.5rem;
-        border: 1.5px solid var(--naranja);
-        padding: 0.5rem 1rem; 
-
-        color: var(--naranja);
-        text-transform: uppercase;
-    }
-
-    .Header-a:hover{
-        background-color: var(--naranja);
-        color: var(--salmon);
-    }
-
-/* Breakpoints Header */
-    @media (max-width: 769px){
-        .Header-nav{
-          /* display: none; */
-          width: 100%;
-          position: absolute;
-          top: 8rem;
-          right: 0;
-      
-          height: 0;
-          overflow: hidden;
-      
-          display: flex;
-          flex-flow: column nowrap;
-          justify-content: center;
-          align-items: center;
-      
-          transition: all 0.5s ;
-        }
-        .Header-button{
-          display: block;
-          cursor: pointer;
-        }
-    }
-      
-/* Aquí empieza el MAIN */
+    /* Aquí empieza el MAIN */
 
 .Main{
     width: 100%;
@@ -238,13 +10,12 @@ body {
     justify-content: center;
     align-items: center;
   }
-  .Main-titular{
   
+  .Main-titular{
     margin: 4rem ;
     padding: 2rem;
   }
 
- 
   .Main-h1{
     font-family: var(--font-h);
     font-size: 9rem;
@@ -252,8 +23,18 @@ body {
     font-weight: 400;
     line-height: 105%; /* 9.84375rem */
     letter-spacing: -0.5rem;
+    text-align: center;
   
     color: var(--naranja);
+
+    animation-name: aparecer;
+    animation-duration: 0.8s;
+    animation-timing-function: ease;
+    animation-delay:0.8s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    animation-play-state: running;
   }
   
   .Main-columnas{
@@ -261,17 +42,26 @@ body {
     /* background-color: sandybrown; */
     
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     justify-content: space-between;
-    align-content: center;
+    align-items: center;
   
-    margin: 0 auto 5rem;
+    margin: 0 auto 3rem;
   }
   
   .Main-columna{
   /* background-color: aquamarine; */
     padding: 2rem;
   }
+
+  .Main-hr{
+    height:30vh;
+    width:.1vw;
+    border-width:0;
+    /* color:var(--naranja); */
+    background-color:var(--naranja);
+   }
+
   .Main-h2{
     /* background-color: violet; */
     text-align: center;
@@ -281,7 +71,7 @@ body {
     font-weight: 700;
     line-height: 1.875rem; /* 125% */
   
-    color: #E63E38;
+    color: var(--naranja);
   
     margin: 0 auto 1rem;
   }
@@ -302,95 +92,26 @@ body {
     font-weight: 400;
     line-height: 1.875rem; /* 75% */
   
-    color: #E63E38;
+    color: var(--naranja);
   }
 
-
-/* ----- Footer ----- */
-.Footer{
-    width: 100%;
-    /* min-height: 4rem; */
-    /* background-color: lightskyblue; */
-
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-content: center;
-
-    padding: 2rem;
-}
-.Footer-p{
-    /* width: 35%; */
-    /* min-height: 2rem; */
-    /* background-color: lavender; */
-    
-    color:var(--naranja);
-    font-family: var(--font-p);
-    font-weight: 400;
-    font-size: small;
-    text-transform: uppercase;
-}
-
-.Footer-redes{
-    /* width: 10%; */
-    /* min-height: 2rem; */
-    /* background-color: lavender; */
-
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
-
-    gap: 2rem;
-}
-
-.Footer-red{
-    /* min-height: 2rem; */
-    /* background-color: greenyellow;  */
-
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.Red-link{
-    padding: 0.3rem;
-}
-.Red-single{
-    width: 1.2rem;
-    /* min-height: 1.5rem; */
-    color: var(--naranja);
-}
-
-
-/* Breakpoints footer*/
-@media screen and (max-width: 769px){
-    .Footer{ 
-        flex-flow: row wrap;
+  @media screen and (max-width: 960px){
+    .Main-columnas{
+      flex-flow: row wrap;
     }
-    .Footer-p{ 
-        width: 50%; 
-        margin: 0 auto 1.5rem;
+    .Main-hr{
+      display: none;
     }
-    .Footer-redes{ 
-        width: 80%; 
-        margin: 0 auto;
+    .Main-columna{
+      margin: 0 auto;
     }
-}
+  }
 
-@media screen and (max-width: 480px){
-    .Footer{ 
-        flex-flow: row wrap;
+  @media screen and (max-width: 480px){
+    .Main-h1{
+      font-size: 5rem;
+      letter-spacing: -0.3rem;
     }
-    .Footer-p{ 
-        width: 100%; 
-        margin: 0 auto 1.5rem;
-        text-align: center;
-    }
-    .Footer-redes{
-        justify-content: space-around;
+  }
 
-    }
-}
-
+ 

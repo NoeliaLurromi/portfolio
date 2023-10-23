@@ -1,7 +1,12 @@
-/* DESCRIPCIÓN: Este archivo de CSS contiene:
+/* DESCRIPCIÓN: Este archivo de CSS contiene los elementos comunes a TODAS las páginas:
+- Reset
+- Custom properties
+- Header
+- Footer 
+*/
 
 
-/* Este es el RESET */
+/* ----- RESET ----- */
 
 @charset "UTF-8";
 
@@ -105,7 +110,7 @@ body {
   font-family: Salernomi J;
   font-display: swap;
   color: var(--negro);
-  background-color: var(--purpura);
+  background-color: var(--salmon);
   /* opcional */
   -webkit-hyphens: auto;
       -ms-hyphens: auto;
@@ -119,18 +124,21 @@ body {
 }
 
 
- /* CUSTOM PROPERTIES */
+ /* ----- CUSTOM PROPERTIES ----- */
+
     :root {
         /* Colores */
         --naranja: #E63E38;
         --salmon: #FFF2F1;
         --purpura:#1E0424;
+        
         /* Tipografías */
         --font-h: 'Salernomi J';
         --font-p: 'Inter';
     }
 
-/* ----- Header ----- */
+
+/* ----- HEADER ----- */
     .Header{
         width: 100%;
         height: 4rem;
@@ -146,12 +154,13 @@ body {
         animation-name: aparecer;
         animation-duration: 0.8s;
         animation-timing-function: ease;
-        animation-delay:0.5s;
+        animation-delay:0.3s;
         animation-iteration-count: 1;
         animation-direction: normal;
         animation-fill-mode: both;
         animation-play-state: running;
     }
+
     .Header-wrapper{
         width: 95%;
         min-height: 4rem;
@@ -163,6 +172,7 @@ body {
         justify-content: space-between;
         align-items: center;
     }
+
     .Header-logo{
        padding: 1rem 1rem 1rem 0;
     }
@@ -176,7 +186,6 @@ body {
     }
 
     .Header-nav.isActive{}
-
     .Header-button{
         display: none;
         max-height: 2.5rem;
@@ -202,16 +211,16 @@ body {
         line-height: normal;
         
         border-radius: 2.5rem;
-        border: 1.5px solid var(--salmon);
+        border: 1.5px solid var(--naranja);
         padding: 0.5rem 1rem; 
 
-        color: var(--salmon);
+        color: var(--naranja);
         text-transform: uppercase;
     }
 
     .Header-a:hover{
-        background-color: var(--salmon);
-        color: var(--purpura);
+        background-color: var(--naranja);
+        color: var(--salmon);
     }
 
 /* Breakpoints Header */
@@ -240,83 +249,9 @@ body {
     }
 
 
-/* ----- Main ----- */
+/* ----- FOOTER ----- */
 
-.Project-main{
-    width: 100%;
-    /* background-color: red; */
-    
-    margin: 3rem 5rem;
-}
-
-.Project-number{
-    font-family: var(--font-h);
-    font-size: 2rem;
-    text-align: left;
-    color: var(--salmon);
-
-    margin: 0 0 2rem 0;
-}
-
-.Project-title{
-    font-family: var(--font-h);
-    font-size: 9rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 105%; /* 9.84375rem */
-    letter-spacing: -0.5rem;
-  
-    color: var(--salmon);
-    margin: 0 0 2rem 0;
-
-}
-
-.Project-details{
-
-    width: 80%;
-
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.Project-p{
-
-    color:var(--salmon);
-    font-family: var(--font-p);
-    font-weight: 400;
-    font-size: small;
-    text-transform: uppercase;
-}
-
-
-.Next{
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.Next-p{
-    font-family: var(--font-h);
-    font-size: 10rem;
-    text-align: left;
-    color: var(--salmon);
-
-    margin: 0 0 2rem 0;
-}
-
-.Next-icon{
-
-}
-
-.Next-svg{
-    color: var(--salmon)
-}
-
-/* ----- Footer ----- */
-.Footer{
+  .Footer{
     width: 100%;
     /* min-height: 4rem; */
     /* background-color: lightskyblue; */
@@ -327,13 +262,23 @@ body {
     align-content: center;
 
     padding: 2rem;
+
+    animation-name: aparecer;
+    animation-duration: 0.8s;
+    animation-timing-function: ease;
+    animation-delay:0.3s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    animation-play-state: running;
 }
+
 .Footer-p{
     /* width: 35%; */
     /* min-height: 2rem; */
     /* background-color: lavender; */
     
-    color:var(--salmon);
+    color:var(--naranja);
     font-family: var(--font-p);
     font-weight: 400;
     font-size: small;
@@ -366,10 +311,11 @@ body {
 .Red-link{
     padding: 0.3rem;
 }
+
 .Red-single{
     width: 1.2rem;
     /* min-height: 1.5rem; */
-    color: var(--salmon);
+    color: var(--naranja);
 }
 
 
@@ -402,3 +348,16 @@ body {
 
     }
 }
+
+/* Animaciones */
+
+@keyframes aparecer {
+    0% {
+      opacity: 0;
+      transform: translateY(0.5em);
+    }
+    100%{
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
