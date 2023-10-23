@@ -145,7 +145,7 @@ body {
         /* background-color: aquamarine; */
 
         display: flex;
-        flex-flow: row nowrap;
+        flex-flow: row wrap;
         justify-content: space-between;
         align-items: center;
 
@@ -159,6 +159,8 @@ body {
         animation-direction: normal;
         animation-fill-mode: both;
         animation-play-state: running;
+
+        position: relative;
     }
 
     .Header-wrapper{
@@ -185,7 +187,11 @@ body {
        /* background-color: aliceblue; */
     }
 
-    .Header-nav.isActive{}
+    .Header-nav.isActive{
+      background-color: var(--naranja);
+    
+    }
+
     .Header-button{
         display: none;
         max-height: 2.5rem;
@@ -202,6 +208,7 @@ body {
 
         gap: 2rem;
     }
+    .Header-li{}
 
     .Header-a{
         font-family: var(--font-p);
@@ -225,6 +232,11 @@ body {
 
 /* Breakpoints Header */
     @media (max-width: 769px){
+
+        .Header{
+          z-index: 1;
+        }
+
         .Header-nav{
           /* display: none; */
           width: 100%;
@@ -235,17 +247,46 @@ body {
           height: 0;
           overflow: hidden;
       
-          display: flex;
-          flex-flow: column nowrap;
-          justify-content: center;
-          align-items: center;
-      
+          display: none;
           transition: all 0.5s ;
         }
+
+        .Header-nav.isActive{
+          display: block ;
+          height: 100vh;
+          /* background-color: orangered; */
+
+          top: 0;
+          left: 0;
+
+          position: absolute;
+        }
+
         .Header-button{
           display: block;
           cursor: pointer;
         }
+
+        .Header-ul{
+          flex-direction: column;
+        }
+
+        .Header-a{
+          font-family: var(--font-h);
+          font-size: 3rem;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+
+          border-radius: 0;
+          border: 0;
+          padding: 1rem; 
+
+          color: var(--salmon);
+
+          justify-content: center;
+          align-items: center;
+      }
     }
 
 
@@ -327,16 +368,21 @@ body {
     .Footer-p{ 
         width: 50%; 
         margin: 0 auto 1.5rem;
+
+        text-align: center;
     }
     .Footer-redes{ 
-        width: 80%; 
-        margin: 0 auto;
+        width: 100%; 
+        justify-content: center;
     }
 }
 
 @media screen and (max-width: 480px){
     .Footer{ 
         flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+
     }
     .Footer-p{ 
         width: 100%; 
@@ -344,7 +390,8 @@ body {
         text-align: center;
     }
     .Footer-redes{
-        justify-content: space-around;
+        justify-content: center;
+        gap: 1rem;
 
     }
 }
@@ -361,3 +408,16 @@ body {
       transform: translateY(0);
     }
   }
+
+@keyframes iconos {
+  0% {
+    transform: rotate(0.2);
+  }
+
+  33% {
+    transform: rotate(-0.2);
+  }
+  100%{
+    transform: rotate(0.2);
+  }
+}

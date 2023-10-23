@@ -32,6 +32,15 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
+
+        animation-name: aparecer;
+        animation-duration: 0.6s;
+        animation-timing-function: ease;
+        animation-delay:0.6s;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-fill-mode: both;
+        animation-play-state: running;
     }
 
     .Main-h2{
@@ -41,7 +50,7 @@
 
         margin: 0 0 3rem 0;
 
-        font-family: Salernomi J;
+        font-family: var(--font-h);
         font-size: 12.5rem;
         font-style: normal;
         font-weight: 400;
@@ -49,7 +58,16 @@
         letter-spacing: -0.5rem;
 
         text-align: center;
-        color: #E63E38;
+        color:var(--naranja);
+
+        animation-name: aparecer;
+        animation-duration: 0.8s;
+        animation-timing-function: ease;
+        animation-delay:1s;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-fill-mode: both;
+        animation-play-state: running;
     }
 
     .Main-content{
@@ -63,6 +81,15 @@
         align-items: center;
 
         margin: 0 0 3rem 0;
+
+        animation-name: aparecer;
+        animation-duration: 0.8s;
+        animation-timing-function: ease;
+        animation-delay:1.2s;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-fill-mode: both;
+        animation-play-state: running;
     }
 
     .Main-p-bold{
@@ -122,9 +149,11 @@
     width: 100%;
     margin-top: 3rem;
 }
+
 .Scroll-inner{
     width: 200rem;
 }
+
 .Scroll-box{
     width: 30rem;
     height: 40rem;
@@ -132,6 +161,7 @@
     margin: 0 1rem 0 0 ;
     border-radius: 2rem;
 }
+
 .Scroll-image{
     border-radius: 2rem;
     max-height: 40rem;

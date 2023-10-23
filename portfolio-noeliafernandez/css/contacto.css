@@ -47,8 +47,17 @@
     align-items: center;
   
     margin: 0 auto 3rem;
+
+    animation-name: aparecer;
+    animation-duration: 0.8s;
+    animation-timing-function: ease;
+    animation-delay:1.2s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    animation-play-state: running;
   }
-  
+    
   .Main-columna{
   /* background-color: aquamarine; */
     padding: 2rem;
