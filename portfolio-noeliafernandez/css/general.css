@@ -255,11 +255,15 @@ body {
           display: block ;
           height: 100vh;
           /* background-color: orangered; */
-
+          
           top: 0;
           left: 0;
 
           position: absolute;
+
+          padding: 3rem;
+
+          margin: 0 auto;
         }
 
         .Header-button{
@@ -359,6 +363,9 @@ body {
     color: var(--naranja);
 }
 
+.Red-single:hover{
+  color:var(--purpura)
+}
 
 /* Breakpoints footer*/
 @media screen and (max-width: 769px){
@@ -366,10 +373,10 @@ body {
         flex-flow: row wrap;
     }
     .Footer-p{ 
-        width: 50%; 
-        margin: 0 auto 1.5rem;
+        width: 100%; 
+        margin: 0 auto;
 
-        text-align: center;
+        text-align: left;
     }
     .Footer-redes{ 
         width: 100%; 
@@ -379,14 +386,17 @@ body {
 
 @media screen and (max-width: 480px){
     .Footer{ 
-        flex-flow: row wrap;
+        flex-flow: column wrap;
         justify-content: center;
         align-items: center;
-
+    }
+    .Footer-wrapper{
+      margin: 0 auto 1.5rem;
+      
     }
     .Footer-p{ 
         width: 100%; 
-        margin: 0 auto 1.5rem;
+        margin: 0 auto;
         text-align: center;
     }
     .Footer-redes{
@@ -409,15 +419,11 @@ body {
     }
   }
 
-@keyframes iconos {
-  0% {
-    transform: rotate(0.2);
-  }
-
-  33% {
-    transform: rotate(-0.2);
-  }
-  100%{
-    transform: rotate(0.2);
-  }
+  @keyframes wiggle {
+    0% { transform: rotate(0deg); }
+   80% { transform: rotate(0deg); }
+   85% { transform: rotate(5deg); }
+   95% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
 }
+

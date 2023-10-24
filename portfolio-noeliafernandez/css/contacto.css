@@ -91,11 +91,22 @@
     margin: 0 auto 2rem;
   }
   
+  .Wiggle{
+    animation: none;
+  }
+
+  .Wiggle:hover{
+    display: block;
+    animation: wiggle 2.5s infinite;
+    
+    position: center;
+  }
+
   .Main-p{
     /* background-color: orange; */
   
     text-align: center;
-    font-family: Salernomi J;
+    font-family:var(--font-h);
     font-size: 2rem;
     font-style: normal;
     font-weight: 400;

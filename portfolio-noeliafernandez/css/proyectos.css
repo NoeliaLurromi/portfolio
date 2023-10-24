@@ -4,13 +4,13 @@
 
 /* ----- Main ----- */
 
-  .Projects{
+  .Projects-main{
     width: 100%;
 
     position: relative;
   }
 
-  .Projects-h2{
+  .Projects-h1{
     width: 60%;
     /* min-height: 4rem; */
     /* background-color: saddlebrown; */
@@ -37,9 +37,11 @@
     animation-fill-mode: both;
     animation-play-state: running;
   }
+  .Projects-wrapper{
+  margin: 5rem 0 0 0 ;
+  }
 
   .Projects-p{
-
     margin:0 0 0 5rem ;
     font-family: var(--font-p);
     font-size: 1rem;
@@ -57,7 +59,9 @@
     place-content: center;
 
     gap: 1rem;
-    margin: 3rem 0;
+    margin: 1rem 0;
+
+   
 
   }
 
@@ -70,19 +74,53 @@
     margin: 0 auto;
 
     transition: all ease 0.5s;
+
+    position: relative;
+    
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center ;
+  }
+
+  .Projects-text{
+    opacity: 0;
+    transition: all ease 1s;
+
+    position: absolute;
+
+    font-family: var(--font-h);
+    font-size: 5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 105%; /* 9.84375rem */
+    letter-spacing: -0.1rem;
+
+    color: var(--salmon);
+    text-align: left;
+
+    
   }
 
   .Projects-single:hover{
     border-radius: 5rem;
   }
-
+  
+  .Projects-text:hover{
+    opacity: 1;
+  }
+  
   .Projects-img{
     object-fit: contain;
     border-radius: 2rem;
 
     transition: all ease 0.5s;
+
+  
   }
 
   .Projects-img:hover{
     border-radius: 5rem;
   }
+
+  

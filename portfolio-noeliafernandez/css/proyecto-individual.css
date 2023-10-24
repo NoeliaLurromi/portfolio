@@ -290,30 +290,39 @@ body {
     text-transform: uppercase;
 }
 
+.Project-wrapper{
+    width: 90%;
+    min-height: 50rem;
+    background-color: aliceblue;
 
-.Next{
+    margin: 3rem auto 5rem 0 ;
+    border-radius: 2rem;
+
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: center;
-}
 
-.Next-p{
-    font-family: var(--font-h);
-    font-size: 10rem;
-    text-align: left;
-    color: var(--salmon);
-
-    margin: 0 0 2rem 0;
-}
-
-.Next-icon{
+    
 
 }
 
-.Next-svg{
-    color: var(--salmon)
+.Project-img{
+  width: 100%;
+  object-fit: contain;
+
+  border-radius: 2rem;
+
 }
+
+.Project-description{
+  width: calc( 100% / 3 );
+}
+
+.Project-h2{
+  color: var(--salmon);
+
+}.Project-tex
 
 /* ----- Footer ----- */
 .Footer{
