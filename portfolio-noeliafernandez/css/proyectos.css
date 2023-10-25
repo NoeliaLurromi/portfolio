@@ -37,6 +37,20 @@
     animation-fill-mode: both;
     animation-play-state: running;
   }
+
+  @media screen and (max-width: 960px){
+    .Projects-h1{
+      width: 80%;
+      font-size: 7rem;
+    }
+  }
+
+  @media screen and (max-width: 480px){
+    .Projects-h1{
+      font-size: 5rem;
+    }
+  }
+
   .Projects-wrapper{
   margin: 5rem 0 0 0 ;
   }
@@ -60,15 +74,12 @@
 
     gap: 1rem;
     margin: 1rem 0;
-
-   
-
   }
 
   .Projects-single{
     width: 100%;
     min-height: 30rem;
-    background-color: pink;
+    /* background-color: pink; */
     border-radius: 2rem;
 
     margin: 0 auto;
@@ -81,6 +92,15 @@
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center ;
+
+    overflow: hidden;
+  }
+
+  .Projects-single:hover{
+    border-radius: 5rem;
+  }
+  .Projects-single:hover .Projects-text{
+    opacity: 1;
   }
 
   .Projects-text{
@@ -99,28 +119,20 @@
     color: var(--salmon);
     text-align: left;
 
-    
+    z-index: 1;
   }
 
-  .Projects-single:hover{
-    border-radius: 5rem;
-  }
-  
-  .Projects-text:hover{
-    opacity: 1;
-  }
-  
   .Projects-img{
-    object-fit: contain;
-    border-radius: 2rem;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 
-    transition: all ease 0.5s;
+ 
 
+    transition: transform 1s ease;
+  }
   
-  }
-
   .Projects-img:hover{
-    border-radius: 5rem;
+    transform: scale(1.1);
   }
-
   

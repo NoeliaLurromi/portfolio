@@ -184,7 +184,7 @@ body {
 
     .Header-ul{
         display: flex;
-        flex-flow: row wrap;
+        flex-flow: row nowrap;
         justify-content: center;
         align-items: center;
 
@@ -208,6 +208,7 @@ body {
         color: var(--salmon);
         text-transform: uppercase;
     }
+
 
     .Header-a:hover{
         background-color: var(--salmon);

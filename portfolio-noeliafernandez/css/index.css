@@ -204,15 +204,11 @@
     }
 
     .Projects-deco{
-    
         position: absolute;
         z-index: 1;
-        bottom: 0;
-        left: auto;
-        right: 5rem;
+        right: 3rem;
+        top: 6rem;
     }
-
-    
 
     .Projects-container{
         width: 90%;

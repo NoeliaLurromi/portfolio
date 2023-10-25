@@ -8,13 +8,14 @@
 
      .About-wrapper{
         width: 92%;
+        min-height: 33rem;
 
         margin: 3rem auto;
 
         display: flex;
         flex-flow: row nowrap;
-        justify-content: space-between;
-        align-items: flex-start;
+        justify-content: center;
+        align-items: center;
      }
 
      .About-h2{
@@ -30,12 +31,12 @@
         letter-spacing: -0.5rem;
     
         color: var(--naranja);
-        text-align: left;
+        text-align: center;
     
         margin: 2rem 5rem;
       }
 
-      .About-img{
+      /* .About-img{
         width: 50%;
         border-radius: 2rem;
-      }
+      } */

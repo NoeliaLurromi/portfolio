@@ -50,7 +50,7 @@ html {
 }
 
 /* Desactivamos estilos por defecto de las principales etiquetas de texto */
-h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+h1, h2, h3, h4, h5, h6, p, span, a, blockquote, i, b, u, em {
   font-size: 1em;
   font-weight: inherit;
   font-style: inherit;
@@ -109,7 +109,7 @@ body {
   font-size: 100%;
   font-family: Salernomi J;
   font-display: swap;
-  color: var(--negro);
+  color: var(--naranja);
   background-color: var(--salmon);
   /* opcional */
   -webkit-hyphens: auto;
@@ -122,7 +122,6 @@ body {
   /* opcional */
   -moz-osx-font-smoothing: grayscale;
 }
-
 
  /* ----- CUSTOM PROPERTIES ----- */
 
@@ -137,6 +136,7 @@ body {
         --font-p: 'Inter';
     }
 
+  
 
 /* ----- HEADER ----- */
     .Header{
@@ -149,7 +149,7 @@ body {
         justify-content: space-between;
         align-items: center;
 
-        padding: 3rem 2rem;
+        padding: 2rem 2rem;
 
         animation-name: aparecer;
         animation-duration: 0.8s;
@@ -183,13 +183,9 @@ body {
         max-height: 3rem;
     }
 
+    /* Aqui empieza el menú para desktop */
     .Header-nav{
        /* background-color: aliceblue; */
-    }
-
-    .Header-nav.isActive{
-      background-color: var(--naranja);
-    
     }
 
     .Header-button{
@@ -226,9 +222,43 @@ body {
     }
 
     .Header-a:hover{
-        background-color: var(--naranja);
-        color: var(--salmon);
+      background-color: var(--naranja);
+      color: var(--salmon);
     }
+
+
+/* Aquí empieza el menú para tablet y mobile */
+    /* .Header-nav Menu{
+      min-height: 100vh;
+      background-color: var(--naranja);
+
+      display: none;
+    }
+
+   .Header-ul Menu{
+       display: flex;
+       flex-flow: column wrap;
+       justify-content: center;
+       align-items: center;
+
+       text-align: center;
+       font-family: var(--font-h);
+
+       gap: 2rem;
+   }
+   .Header-li Menu{}
+
+   .Header-a Menu{
+       font-family: var(--font-p);
+       font-size: 5rem;
+       font-style: var(--font-h);
+       line-height: 105%;
+
+       color: var(--salmon);
+       text-transform: uppercase;
+   } */
+
+
 
 /* Breakpoints Header */
     @media (max-width: 769px){
@@ -421,9 +451,10 @@ body {
 
   @keyframes wiggle {
     0% { transform: rotate(0deg); }
-   80% { transform: rotate(0deg); }
-   85% { transform: rotate(5deg); }
-   95% { transform: rotate(-5deg); }
-  100% { transform: rotate(0deg); }
+   15% { transform: rotate(10deg); }
+   30% { transform: rotate(-10deg); }
+   45% { transform: rotate(10deg); }
+   70% { transform: rotate(0deg); }
+  /* 100% { transform: rotate(10deg); } */
 }
 

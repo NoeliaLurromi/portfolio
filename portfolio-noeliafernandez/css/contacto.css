@@ -63,6 +63,13 @@
     padding: 2rem;
   }
 
+  .Main-columna:hover .Wiggle{
+    display: block;
+    animation: wiggle 1.5s infinite;
+    
+    position: center;
+  }
+
   .Main-hr{
     height:30vh;
     width:.1vw;
@@ -89,17 +96,6 @@
     /* background-color: saddlebrown; */
   
     margin: 0 auto 2rem;
-  }
-  
-  .Wiggle{
-    animation: none;
-  }
-
-  .Wiggle:hover{
-    display: block;
-    animation: wiggle 2.5s infinite;
-    
-    position: center;
   }
 
   .Main-p{
