@@ -92,23 +92,6 @@
         animation-play-state: running;
     }
 
-    .Main-p-bold{
-        width: 55%;
-        /* min-height: 1rem; */
-        /* background-color: khaki; */
-
-        margin: 0 0 1rem 0;
-
-        font-family: Inter;
-        font-size: 1rem;
-        font-style: normal;
-        font-weight: 700;
-        text-transform: uppercase;
-        text-align: center;
-
-        color: var(--naranja);
-    }
-
     .Main-p{
         width: 30%;
         /* min-height: 2rem; */
@@ -122,6 +105,8 @@
         text-align: center;
 
         color: var(--naranja);
+
+        margin: 0 auto 1rem;
     }
 
 /* Breakpoints Main */
@@ -141,32 +126,6 @@
             width: 90%;
         }
     }
-
-/* ----- Scroll images ----- */
-
-.Scroll-outer{
-    overflow: scroll;
-    width: 100%;
-    margin-top: 3rem;
-}
-
-.Scroll-inner{
-    width: 200rem;
-}
-
-.Scroll-box{
-    width: 30rem;
-    height: 40rem;
-    float: left;
-    margin: 0 1rem 0 0 ;
-    border-radius: 2rem;
-}
-
-.Scroll-image{
-    border-radius: 2rem;
-    max-height: 40rem;
-    object-fit: cover;
-}
 
 /* ----- Projects ----- */
     .Projects{
@@ -210,104 +169,19 @@
         top: 6rem;
     }
 
-    .Projects-container{
-        width: 90%;
-        /* min-height: 20rem; */
-        /* background-color: lightseagreen; */
-
-        margin: 0 0 2rem 0;
-    }
-
-    .Project-image{
-        width: 100%;
-        /* min-height: 30rem; */
-        background-color: var(--naranja);
-
-        margin: 0 0 2rem 0;
-
-        border-radius: 2rem;
-        object-fit: cover;
-    }
-
-    .Project-title{
-        width: 100%;
-        /* min-height: 3rem; */
-        /* background-color: seagreen; */
-
-        font-family: Salernomi J;
-        font-size: 2.5rem;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 1.8rem;
-        letter-spacing: -0.1rem;
-
-        margin: 0 0 0.5rem 0;
-        
-        color: var(--naranja);
-    }
-    .Project-tags{
-        width: 80%;
-        /* min-height: 3rem; */
-        /* background-color: burlywood; */
-
-        font-family: Inter;
-        font-size: 1rem;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 1.875rem; 
-
-        color: var(--naranja);
-    }
-
-    .Projects-container-pair{
-        width: 90%;
-        /* min-height: 20rem; */
-        /* background-color: lightpink; */
-
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
-        align-content: center;
-
-        margin: 0 0 2rem 0;
-    }
-
-    @media screen and (max-width: 768px){
-        .Projects{ 
-            flex-flow:column wrap; 
-        }
-        .Projects-container-pair{
-            flex-flow: row wrap;
-            justify-content: center;
-        }
-    }
-
-    .Project-container-squared{
-        width: 48%;
-        /* min-height: 18rem; */
-        /* background-color: gray; */
-    }
-
-    @media screen and (max-width: 768px){
-        .Project-container-squared{
-            width: 90%;
-        }
-    }
-
-
     .Aboutme{
-        width: 90%;
+        width: 90%; 
         /* min-height: 34rem; */
         /* background-color: purple; */
 
         border-radius: 2rem;
 
         display: flex;
-        flex-flow: row wrap;
+        flex-flow: row nowrap;
         justify-content: space-between;
         align-content: center;
 
-        margin: auto;
+        margin: 0 auto 2rem;
     }
 
     .Aboutme-img{
@@ -315,7 +189,7 @@
         /* min-height: 34rem; */
         /* background-color: blanchedalmond; */
 
-        object-fit: cover;
+        object-fit: contain;
         border-radius:2rem 0 0 2rem ;
     }
 
@@ -366,6 +240,10 @@
         color: var(--salmon);
     }
 
+    .Aboutme-a{
+
+    }
+
 /* Breakpoints Aboutme */
     @media screen and (max-width: 768px){
         .Aboutme-text{
@@ -379,9 +257,7 @@
     @media screen and (max-width: 480px){
         .Aboutme{
             border-radius: 2rem ;
-        }
-     
-        
+        }    
     }
 
 /* ----- Contact ----- */
@@ -395,10 +271,10 @@
         justify-content: space-between;
         align-items: center;
 
-        padding: 2rem;
+        padding: 3rem;
     }
 
-    .Contact-text{
+    .Contact-h3{
         /* width: 50%; */
         /* min-height: 3rem; */
         /* background-color: bisque; */
@@ -413,7 +289,10 @@
     }
 
     .Contact-icon{
-        width: 10%;
+        max-width: 9rem;
+    }
+
+    .Contact-svg{        
         /* min-height: 2rem; */
         /* background-color: bisque; */
         padding: 1rem;
@@ -423,15 +302,25 @@
 
 /* Breakpoints Contact */
     @media screen and (max-width: 769px){
-        .Contact-text{
+        .Contact-h3{
             font-size: 7rem;
             letter-spacing: -0.2rem;
-           }
+        }
+     
     }
 
     @media screen and (max-width: 480px){
-       .Contact-text{
-        font-size: 5rem;
-        letter-spacing: -0.2rem;
-       }
+        .Contact{
+            justify-content: center;
+        }
+        .Contact-h3{
+         font-size: 5rem;
+         letter-spacing: -0.2rem;
+         text-align: center;
+        }
+        .Contact-icon{
+            display: none;
+        }
     }
+
+

@@ -141,7 +141,7 @@ body {
         justify-content: space-between;
         align-items: center;
 
-        padding: 3rem 2rem;
+        padding: 4rem 2rem;
 
         animation-name: aparecer;
         animation-duration: 0.8s;
@@ -207,6 +207,8 @@ body {
 
         color: var(--salmon);
         text-transform: uppercase;
+
+        transition: all 0.5s ease;
     }
 
 
@@ -244,10 +246,15 @@ body {
 /* ----- Main ----- */
 
 .Project-main{
-    width: 100%;
+    width: 90%;
     /* background-color: red; */
     
-    margin: 3rem 5rem;
+    margin: 3rem 4rem;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: left;
 }
 
 .Project-number{
@@ -274,7 +281,7 @@ body {
 
 .Project-details{
 
-    width: 80%;
+    width: 100%;
 
     display: flex;
     flex-flow: row nowrap;
@@ -287,30 +294,28 @@ body {
     color:var(--salmon);
     font-family: var(--font-p);
     font-weight: 400;
-    font-size: small;
+    font-size: 1em;
     text-transform: uppercase;
 }
 
 .Project-wrapper{
-    width: 90%;
-    min-height: 50rem;
+    width: 100%;
+    max-height: 50rem;
     background-color: aliceblue;
 
-    margin: 3rem auto 5rem 0 ;
+    margin: 3rem 0 ;
     border-radius: 2rem;
 
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: center;
-
-    
-
 }
 
 .Project-img{
   width: 100%;
-  object-fit: contain;
+  min-height: 50rem;
+  object-fit: cover;
 
   border-radius: 2rem;
 
@@ -318,12 +323,108 @@ body {
 
 .Project-description{
   width: calc( 100% / 3 );
+  margin: 0 0 3rem 3rem;
 }
 
 .Project-h2{
   color: var(--salmon);
+  font-family: var(--font-p);
+  font-weight: 600;
 
-}.Project-tex
+  margin: 0 0 1rem 0;
+
+}
+
+.Project-p{}
+
+.Project-images-pair{
+  width: 100%;
+  margin: 0 0 4rem 0;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.Project-img-little{
+  width: 48%;
+  min-height: 30rem;
+  background-color: var(--salmon);
+  border-radius: 2rem;
+
+  object-fit: cover;
+}
+
+.Project-next{
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Project-h3{
+  font-size: 9rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 105%;
+  letter-spacing: -0.5rem;
+
+  color: var(--salmon);
+
+  display: inline-block;
+  position: relative;
+}
+
+.Project-h3:after{
+  position: absolute;
+  width: 100%;
+  height: 1rem;
+  bottom: 0;
+  left: 0;
+  background-color: var(--salmon);
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: all 1s ease-out;
+}
+
+.Project-h3:hover:after{
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.Project-svg{
+  /* background-color: aquamarine; */
+  max-height: 7rem;
+  max-width: 7rem;
+
+  color: var(--salmon);
+
+  stroke: #FFF2F1;
+}
+
+.Project-svg:hover{
+  color: var(--naranja);
+}
+
+@media screen and (max-width: 960px){
+  .Project-details{
+    flex-flow: row wrap;
+  }
+  .Project-description{
+    width: 80%;
+  }
+  .Project-images-pair{
+    flex-flow: row wrap;
+  }
+  .Project-img-little{
+    width: 100%;
+    margin: 0 0 2rem 0;
+  }
+}
+
 
 /* ----- Footer ----- */
 .Footer{
@@ -336,7 +437,7 @@ body {
     justify-content: space-between;
     align-content: center;
 
-    padding: 2rem;
+    padding: 3rem;
 }
 .Footer-p{
     /* width: 35%; */
@@ -380,6 +481,10 @@ body {
     width: 1.2rem;
     /* min-height: 1.5rem; */
     color: var(--salmon);
+}
+
+.Red-single:hover{
+  color: var(--naranja);
 }
 
 

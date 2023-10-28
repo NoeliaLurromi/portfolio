@@ -8,10 +8,13 @@
     width: 100%;
 
     position: relative;
+    padding: 0rem 5rem 2rem 5rem;
+
+    margin: 5rem 0 0 0;
   }
 
   .Projects-h1{
-    width: 60%;
+    width: 70%;
     /* min-height: 4rem; */
     /* background-color: saddlebrown; */
     
@@ -25,8 +28,7 @@
     color: var(--naranja);
     text-align: left;
 
-    margin: 2rem 5rem;
-
+    /* margin: 2rem 5rem; */
 
     animation-name: aparecer;
     animation-duration: 0.8s;
@@ -46,17 +48,29 @@
   }
 
   @media screen and (max-width: 480px){
+ 
     .Projects-h1{
       font-size: 5rem;
+      text-align: center;
+      letter-spacing: -0.3rem;
+      width: 100%;
     }
   }
 
   .Projects-wrapper{
-  margin: 5rem 0 0 0 ;
+  margin: 2rem 0 0 0 ;
+
+  animation-name: aparecer;
+  animation-duration: 0.8s;
+  animation-timing-function: ease;
+  animation-delay:1.5s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: both;
+  animation-play-state: running;
   }
 
   .Projects-p{
-    margin:0 0 0 5rem ;
     font-family: var(--font-p);
     font-size: 1rem;
     font-style: normal;
@@ -68,9 +82,10 @@
   }
 
   .Projects-container{
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(2 , 45%);
-    place-content: center;
+    grid-template-columns: repeat(2 , 50%);
+    place-content: left;
 
     gap: 1rem;
     margin: 1rem 0;
@@ -117,7 +132,7 @@
     letter-spacing: -0.1rem;
 
     color: var(--salmon);
-    text-align: left;
+    text-align: center;
 
     z-index: 1;
   }
@@ -127,8 +142,6 @@
     height: 100%;
     object-fit: cover;
 
- 
-
     transition: transform 1s ease;
   }
   
@@ -136,3 +149,16 @@
     transform: scale(1.1);
   }
   
+
+  @media screen and (max-width: 960px){
+
+    .Projects-text{
+      opacity: 1;
+      font-size: 5rem;
+
+    }
+    .Projects-container{
+      grid-template-columns: repeat(1 , 100%);
+
+    }
+  }

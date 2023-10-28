@@ -12,7 +12,7 @@
   }
   
   .Main-titular{
-    margin: 4rem ;
+    margin: 5rem ;
     padding: 2rem;
   }
 
@@ -46,7 +46,7 @@
     justify-content: space-between;
     align-items: center;
   
-    margin: 0 auto 3rem;
+    margin: 0 auto 4rem;
 
     animation-name: aparecer;
     animation-duration: 0.8s;
@@ -69,14 +69,6 @@
     
     position: center;
   }
-
-  .Main-hr{
-    height:30vh;
-    width:.1vw;
-    border-width:0;
-    /* color:var(--naranja); */
-    background-color:var(--naranja);
-   }
 
   .Main-h2{
     /* background-color: violet; */
