@@ -8,13 +8,15 @@
 /* ----- Main ----- */
     .Main{
         width: 100%;
-        /* min-height: 90vh; */
+        /* min-height: calc( 100vh); */
         /* background-color: pink; */
 
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
         align-items: center;
+
+        margin: 5rem 0 0 0 ;
     }
 
     .Main-image{
@@ -181,7 +183,6 @@
         margin: 0 0 3rem 0;
 
         position: relative;
-
     }
     
     .Projects-list{
@@ -234,7 +235,7 @@
         border-radius: 2rem;
 
         display: flex;
-        flex-flow: row nowrap;
+        flex-flow: row wrap;
         justify-content: space-between;
         align-content: center;
 
@@ -249,7 +250,6 @@
         object-fit: contain;
         border-radius:2rem 0 0 2rem ;
     }
-
 
     .Aboutme-text{
         width: 50%;
@@ -298,6 +298,15 @@
     }
 
     .Aboutme-a{
+        min-height: 2rem;
+        width: 20%;
+        background-color: var(--salmon);
+        border-radius: 2rem;
+        margin: 0 0 0 2rem;
+
+        text-align: center;
+        font-family: var(--font-p);
+        justify-content: center;
 
     }
 
@@ -343,6 +352,31 @@
         letter-spacing: -0.5rem;
 
         color: var(--naranja);
+
+        display: inline-block;
+        position: relative;
+    }
+
+
+    .Contact-h3::after{
+        position: absolute;
+        width: 100%;
+        height: 0.3rem;
+        bottom: 0;
+        left: 0;
+    
+        background-color: var(--naranja);
+        transform: scaleX(0);
+        transform-origin: bottom right;
+        transition: transform 1s ease-out;
+    
+        content: '';
+        display:block;
+    }
+    
+    .Contact-h3:hover::after{
+        transform: scaleX(1);
+        transform-origin: bottom left;
     }
 
     .Contact-icon{

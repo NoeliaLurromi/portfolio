@@ -132,7 +132,7 @@ body {
         --purpura:#1E0424;
         
         /* Tipografías */
-        --font-h: 'Salernomi J';
+        --font-h: 'salernomi_jroman', 'Salernomi J',;
         --font-p: 'Inter';
     }
 
@@ -141,14 +141,16 @@ body {
 /* ----- HEADER ----- */
     .Header{
         width: 100%;
-        height: 4rem;
+        /* height: 4rem; */
+        /* background: linear-gradient(360deg, rgba(255,255,255,0) 10%, rgba(255,242,241,1) 100%); */
+      
 
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
         align-items: center;
 
-        padding: 2rem 2rem;
+        padding: 0.5rem 2rem;
 
         animation-name: aparecer;
         animation-duration: 0.8s;
@@ -156,15 +158,22 @@ body {
         animation-delay:0.3s;
         animation-iteration-count: 1;
         animation-direction: normal;
-        animation-fill-mode: both;
+        animation-fill-mode: backwards;
         animation-play-state: running;
 
-        position: relative;
+        position: fixed;
+        top: 0;
+        z-index: 1;
+
+        transition: opacity 0.5s ease;
+    }
+    .Header.isHidden{
+      opacity: 0;
     }
 
     .Header-wrapper{
         width: 95%;
-        min-height: 4rem;
+        /* min-height: 4rem; */ 
         /* background-color: rebeccapurple; */
         margin: 0 auto;
 
@@ -457,5 +466,38 @@ body {
    45% { transform: rotate(10deg); }
    70% { transform: rotate(0deg); }
   /* 100% { transform: rotate(10deg); } */
+}
+
+@font-face {
+  font-family: 'salernomi_jroman';
+  src: url('9salerno-webfont.woff2') format('woff2'),
+       url('9salerno-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.Cortinilla-naranja{
+  width: 100vw;
+  min-height: 100vh;
+  background-color: var(--naranja);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 1s ease;
+  
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  z-index: 2;
+}
+
+.Cortinilla-naranja.isActive{
+  transform: scaleX(1);
+  transform-origin: left;
+
+  top: 0;
+  right: 0;
 }
 

@@ -3,7 +3,7 @@
 .Main{
     width: 100%;
     /* background-color: khaki; */
-    min-height: 20rem;
+    min-height: calc(100vh - 20rem);
   
     display: flex;
     flex-flow:column nowrap;
@@ -16,7 +16,7 @@
     padding: 2rem;
   }
 
-  .Main-h1{
+  .Main-h2{
     font-family: var(--font-h);
     font-size: 9rem;
     font-style: normal;
@@ -70,7 +70,7 @@
     position: center;
   }
 
-  .Main-h2{
+  .Main-h3{
     /* background-color: violet; */
     text-align: center;
     font-family: Inter;
@@ -101,6 +101,10 @@
     line-height: 1.875rem; /* 75% */
   
     color: var(--naranja);
+  }
+
+  .Main-p.Purple:hover{
+    color: var(--purpura)
   }
 
   @media screen and (max-width: 960px){
