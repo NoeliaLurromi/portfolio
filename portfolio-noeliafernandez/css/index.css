@@ -137,11 +137,11 @@
     width: auto;
     /* min-height: 150vh; */
     /* background-color: lightgreen; */
-    margin: 6rem 6rem 6rem 20rem;
+    margin: 2rem;
 
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
     align-items: flex-start;
 }
 
@@ -175,8 +175,10 @@
     } */
 
 .Projects-container {
+
+    width: 90%;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     justify-content: flex-start;
     align-content: center;
 
@@ -187,7 +189,9 @@
     position: relative;
 }
 
-.Projects-list {}
+.Projects-list {
+    width: 100%;
+}
 
 .Projects-single {
     display: flex;
@@ -198,8 +202,8 @@
 
 .Projects-a {
 
-    width: 40%;
-    
+    width: 100%;
+
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
@@ -223,13 +227,13 @@
 }
 
 .Project-image {
-    width: 70%;
+    width: 40%;
     min-height: 10rem;
     background-color: lightblue;
 
     border-radius: 2rem;
 
-    opacity: 1;
+    opacity: 0;
 }
 
 .Project-image.isActive {
@@ -244,7 +248,7 @@
     line-height: normal;
     letter-spacing: -0.2rem;
 
-    text-align: center;
+    text-align: left;
     text-transform: uppercase;
     color: var(--naranja);
 }
@@ -269,100 +273,93 @@
     transform-origin: bottom left;
 }
 
-.Aboutme {
-    width: 90%;
-    min-height: 15rem;
-    /* background-color: purple; */
-
-    border-radius: 2rem;
-
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    align-content: center;
-
-    margin: 0 auto 2rem;
-}
-
-.Aboutme-img {
-    width: 50%;
-    /* min-height: 34rem; */
-    /* background-color: blanchedalmond; */
-
-    object-fit: cover;
-    border-radius: 2rem 0 0 2rem;
-}
-
-.Aboutme-text {
-    width: 50%;
-    /* min-height: 34rem; */
+/* ----- About me ----- */
+.About-container {
+    width: 100%;
     background-color: var(--naranja);
-
-    padding: 3rem;
-
-    border-radius: 0 2rem 2rem 0;
 }
 
-.Aboutme-h3 {
-    width: 80%;
-    /* min-height: 3rem; */
-    /* background-color: lightcoral; */
-
-    margin: 0 0 3rem 2rem;
-
-    font-size: 3.5rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 105%;
-    letter-spacing: -0.1rem;
-
-    color: var(--salmon);
-}
-
-.Aboutme-p {
-    width: 80%;
-    /* min-height: 3rem; */
-    /* background-color: red; */
-
-    margin: 0 0 3rem 2rem;
-
-    font-size: 2rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 105%;
-
-    color: var(--salmon);
-}
-
-.Aboutme-a {
-    min-height: 2rem;
-    width: 20%;
-    background-color: var(--salmon);
+.About-image {
+    width: 30%;
+    margin: 3rem auto 2rem;
     border-radius: 2rem;
-    margin: 0 0 0 2rem;
+}
+
+.About-img{
+    object-fit: contain;
+    border-radius: 2rem;
+}
+
+.About-h3 {
+    width: 80%;
+    margin: 0 auto 1rem;
+
+    font-family: var(--font-h);
+    font-size: 5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.2rem;
 
     text-align: center;
+    color: var(--salmon);
+
+    border-radius: 0;
+    border: 0;
+    padding: rem;
+}
+
+.About-p {
+
+    width: 50%;
+    margin: 0 auto 2rem;
+
     font-family: var(--font-p);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+
+    color: var(--salmon);
+}
+.About-div{
+    margin: 0 auto;
+
+    display: flex;
+    flex-flow: row nowrap;
     justify-content: center;
+    align-items: center;
+}
+
+.About-a {
+    width: auto;
+    font-family: var(--font-p);
+    font-size: 0.8rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    border-radius: 2.5rem;
+    border: 1.5px solid var(--salmon);
+    padding: 0.5rem 1rem;
+
+    color: var(--salmon);
+    text-transform: uppercase;
+    text-align: center;
+
+    margin: 0 auto 3rem;
+
+    transition: all 0.5 ease;
+}
+
+.About-a:hover{
+    color: var(--naranja);
+    background-color: var(--salmon);
 
 }
 
-/* Breakpoints Aboutme */
-@media screen and (max-width: 768px) {
-    .Aboutme-text {
-        width: 90%;
-    }
 
-    .Aboutme-img {
-        width: 90%;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .Aboutme {
-        border-radius: 2rem;
-    }
-}
 
 /* ----- Contact ----- */
 .Contact {
@@ -394,7 +391,6 @@
     display: inline-block;
     position: relative;
 }
-
 
 .Contact-h3::after {
     position: absolute;
