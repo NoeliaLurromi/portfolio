@@ -1,129 +1,133 @@
-    /* Aquí empieza el MAIN */
+/* ----- CONTACTO ----- */
 
-.Main{
-    width: 100%;
-    /* background-color: khaki; */
-    min-height: calc(100vh - 20rem);
-  
-    display: flex;
-    flex-flow:column nowrap;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .Main-titular{
-    margin: 5rem ;
-    padding: 2rem;
-  }
+/* Aquí empieza el MAIN de Contacto*/
+.Contacto .Main {
+  width: 100%;
+  /* background-color: khaki; */
+  min-height: calc(100vh - 7rem);
 
-  .Main-h2{
-    font-family: var(--font-h);
-    font-size: 9rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 105%; /* 9.84375rem */
-    letter-spacing: -0.5rem;
-    text-align: center;
-  
-    color: var(--naranja);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
 
-    animation-name: aparecer;
-    animation-duration: 0.8s;
-    animation-timing-function: ease;
-    animation-delay:0.8s;
-    animation-iteration-count: 1;
-    animation-direction: normal;
-    animation-fill-mode: both;
-    animation-play-state: running;
-  }
-  
-  .Main-columnas{
-    width: 80%;
-    /* background-color: sandybrown; */
-    
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
-  
-    margin: 0 auto 4rem;
+.Contacto .Main-titular {
+  margin: 5rem;
+  padding: 2rem;
+}
 
-    animation-name: aparecer;
-    animation-duration: 0.8s;
-    animation-timing-function: ease;
-    animation-delay:1.2s;
-    animation-iteration-count: 1;
-    animation-direction: normal;
-    animation-fill-mode: both;
-    animation-play-state: running;
-  }
-    
-  .Main-columna{
+.Contacto .Main-h2 {
+  font-family: var(--font-h);
+  font-size: 9rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 105%;
+  /* 9.84375rem */
+  letter-spacing: -0.5rem;
+  text-align: center;
+
+  color: var(--naranja);
+
+  animation-name: aparecer;
+  animation-duration: 0.8s;
+  animation-timing-function: ease;
+  animation-delay: 0.8s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: both;
+  animation-play-state: running;
+}
+
+.Contacto .Main-columnas {
+  width: 80%;
+  /* background-color: sandybrown; */
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 0 auto 4rem;
+
+  animation-name: aparecer;
+  animation-duration: 0.8s;
+  animation-timing-function: ease;
+  animation-delay: 1.2s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: both;
+  animation-play-state: running;
+}
+
+.Contacto .Main-columna {
   /* background-color: aquamarine; */
-    padding: 2rem;
+  padding: 2rem;
+}
+
+.Contacto .Main-columna:hover .Wiggle {
+  display: block;
+  animation: wiggle 1.5s infinite;
+}
+
+.Contacto .Main-h3 {
+  /* background-color: violet; */
+  text-align: center;
+  font-family: Inter;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.875rem;
+  /* 125% */
+
+  color: var(--naranja);
+
+  margin: 0 auto 1rem;
+}
+
+.Contacto .Main-img {
+  max-width: 3rem;
+  /* background-color: saddlebrown; */
+
+  margin: 0 auto 2rem;
+}
+
+.Contacto .Main-p {
+  /* background-color: orange; */
+
+  text-align: center;
+  font-family: var(--font-h);
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.875rem;
+  /* 75% */
+
+  color: var(--naranja);
+}
+
+.Contacto .Main-p.Purple:hover {
+  color: var(--purpura)
+}
+
+/* Estos son los BREAKPOINTS de Contacto */
+@media screen and (max-width: 960px) {
+  .Contacto .Main-columnas {
+    flex-flow: row wrap;
   }
 
-  .Main-columna:hover .Wiggle{
-    display: block;
-    animation: wiggle 1.5s infinite;
-    
-    position: center;
+  .Contacto .Main-hr {
+    display: none;
   }
 
-  .Main-h3{
-    /* background-color: violet; */
-    text-align: center;
-    font-family: Inter;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 1.875rem; /* 125% */
-  
-    color: var(--naranja);
-  
-    margin: 0 auto 1rem;
+  .Contacto .Main-columna {
+    margin: 0 auto;
   }
-  .Main-img{
-    max-width: 3rem;
-    /* background-color: saddlebrown; */
-  
-    margin: 0 auto 2rem;
-  }
+}
 
-  .Main-p{
-    /* background-color: orange; */
-  
-    text-align: center;
-    font-family:var(--font-h);
-    font-size: 2rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.875rem; /* 75% */
-  
-    color: var(--naranja);
+@media screen and (max-width: 480px) {
+  .Contacto .Main-h1 {
+    font-size: 5rem;
+    letter-spacing: -0.3rem;
   }
-
-  .Main-p.Purple:hover{
-    color: var(--purpura)
-  }
-
-  @media screen and (max-width: 960px){
-    .Main-columnas{
-      flex-flow: row wrap;
-    }
-    .Main-hr{
-      display: none;
-    }
-    .Main-columna{
-      margin: 0 auto;
-    }
-  }
-
-  @media screen and (max-width: 480px){
-    .Main-h1{
-      font-size: 5rem;
-      letter-spacing: -0.3rem;
-    }
-  }
-
- 
+}

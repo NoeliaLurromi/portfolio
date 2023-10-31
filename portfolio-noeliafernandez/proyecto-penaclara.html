@@ -1,7 +1,7 @@
-<!-- DESCRIPCIÓN: Este archivo de HTML contiene el "contacto" del sitio web.
+<!-- DESCRIPCIÓN: Este archivo de HTML contiene la página "sobre mí".
     Su estructura es la siguiente:
     - Header con menú de navegación
-    - Formas de contacto
+    - Contenido principal con portada, proyectos, sobre mí y contacto
     - Footer con datos y redes sociales
  -->
 
@@ -12,27 +12,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lurromi</title>
-    <link rel="stylesheet" href="css/contacto.css">
-    <link rel="stylesheet" href="css/general.css">
-    <script defer src="js/general.js"></script>
-    <link rel="icon" type="image/png" href="assets/favicon-lurromi-web.png">
+    <link rel="stylesheet" href="css/proyecto-individual.css">
+    <!-- <link rel="stylesheet" href="css/general.css"> -->
+    <link rel="icon" type="image/png" href="assets/favicon-lurromi-web.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 </head>
 
-<body class="Contacto">
+<body>
     <!-- Cortinillas entre páginas -->
     <div class="Cortinilla-naranja"></div>
     <div class="Cortinilla-salmon"></div>
 
-    <!-- Header -->
+    <!-- Encabezado y menú de navegación -->
     <div class="Header">
         <div class="Header-wrapper">
             <h1 class="Header-logo">
                 <a href="index.html" title="Logo Lurromi">
-                    <img class="Header-img" src="assets/lurromi-icon.svg" alt="Ir al inicio">
+                    <img class="Header-img" src="assets/lurromi-icon-salmon.svg" alt="Ir al inicio">
                 </a>
             </h1>
 
@@ -57,39 +56,51 @@
     </div>
 
     <!-- Main -->
-    <main class="Main">
-        <div class="Main-titular">
-            <h1 class="Main-h2">Let's work together!</h1>
+    <main class="Project-main">
+        <p class="Project-number">(1/4)</p>
+        <h1 class="Project-title">Peñaclara</h1>
+        <span class="Project-details">
+            <p class="Project-p">Diseño de etiqueta para edición especial</p>
+            <p class="Project-p">Packaging / Illustration</p>
+            <p class="Project-p">2020</p>
+        </span>
+
+        <div class="Project-wrapper">
+            <img src="assets/imagen-prueba" alt="Imagen de prueba" class="Project-img" loading="lazy">
         </div>
-        <div class="Main-columnas">
-            <section class="Main-columna">
-                <img class="Main-img Wiggle" src="assets/love-letter-icon.png" alt="Icono correo">
-                <h2 class="Main-h3">E-MAIL</h2>
-                <a href="mailto:soylurromi@gmail.com" class="Main-p Purple"
-                    title="Enviar mail a soylurromi@gmail.com">soylurromi@gmail.com</a>
-            </section>
-            <section class="Main-columna">
-                <img class="Main-img Wiggle" src="assets/explosion-icon.png" alt="Icono explosión">
-                <h2 class="Main-h3">REDES</h2>
-                <p class="Main-p">Búscame como @lurromi</p>
-            </section>
-            <section class="Main-columna">
-                <img class="Main-img Wiggle" src="assets/coffee-icon.png" alt="Icono café">
-                <h2 class="Main-h3">CAFÉ</h2>
-                <p class="Main-p">¡Charlamos y lo vemos!</p>
-            </section>
+
+        <div class="Project-description">
+            <h2 class="Project-h2"><strong>EL PROYECTO</strong></h2>
+            <p class="Project-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, eveniet cumque
+                deleniti, ducimus ullam voluptatum rem labore, tempore numquam sed totam eum. Reprehenderit possimus
+                autem facilis dicta, praesentium eveniet neque.</p>
         </div>
+
+        <div class="Project-images-pair">
+            <img src="assets/imagen-prueba" alt="Imagen de prueba" class="Project-img-little" loading="lazy">
+            <img src="assets/imagen-prueba" alt="Imagen de prueba" class="Project-img-little" loading="lazy">
+        </div>
+
+        <a class="Project-next" href="proyecto-dos.html" title="Ver siguiente proyecto">
+            <h3 class="Project-h3">Siguiente proyecto</h3>
+            <svg class="Project-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"
+                    d="M6 19 19 6m0 0v12.48M19 6H6.52"></path>
+            </svg>
+        </a>
     </main>
 
-    <!-- Footer -->
+
+
+    <!-- Pie de página -->
     <footer class="Footer">
         <div class="Footer-wrapper">
             <p class="Footer-p">all rights reserved</p>
-            <p class="Footer-p"><strong>&copy; 2023</strong></p>
+            <p class="Footer-p"><b>&copy; 2023</b></p>
         </div>
         <div class="Footer-wrapper">
             <p class="Footer-p">design & dev by</p>
-            <p class="Footer-p"><strong>lurromi</strong></p>
+            <p class="Footer-p"><b>lurromi</b></p>
         </div>
         <ul class="Footer-redes">
             <li class="Footer-red">
@@ -120,3 +131,5 @@
     </footer>
 
 </body>
+
+</html>

@@ -6,412 +6,455 @@
 
 
 /* ----- Main ----- */
-    .Main{
-        width: 100%;
-        /* min-height: calc( 100vh); */
-        /* background-color: pink; */
+.Main {
+    width: 100%;
+    /* min-height: calc( 100vh); */
+    /* background-color: pink; */
 
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items: center;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
 
-        margin: 5rem 0 0 0 ;
-    }
+    margin: 5rem 0 0 0;
+}
 
-    .Main-image{
-        width: 100%;
-        min-height: 30rem;
+.Main-image {
+    width: 100%;
+    min-height: 30rem;
 
-        margin: 4rem 0;
+    margin: 4rem 0;
 
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items: center;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
 
-        background-image: url(../assets/lurromi-abstract-3d.png);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
+    background-image: url(../assets/lurromi-abstract-3d.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 
-        animation-name: aparecer;
-        animation-duration: 0.6s;
-        animation-timing-function: ease;
-        animation-delay:0.6s;
-        animation-iteration-count: 1;
-        animation-direction: normal;
-        animation-fill-mode: both;
-        animation-play-state: running;
-    }
+    animation-name: aparecer;
+    animation-duration: 0.6s;
+    animation-timing-function: ease;
+    animation-delay: 0.6s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    animation-play-state: running;
+}
 
-    .Main-h2{
-        /* width: 90%; */
-        /* min-height: 10rem; */
-        /* background-color: purple; */
+.Main-h2 {
+    /* width: 90%; */
+    /* min-height: 10rem; */
+    /* background-color: purple; */
 
-        margin: 0 0 3rem 0;
+    margin: 0 0 3rem 0;
 
-        font-family: var(--font-h);
-        font-size: 12.5rem;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        letter-spacing: -0.5rem;
+    font-family: var(--font-h);
+    font-size: 12.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.5rem;
 
-        text-align: center;
-        color:var(--naranja);
+    text-align: center;
+    color: var(--naranja);
 
-        animation-name: aparecer;
-        animation-duration: 0.8s;
-        animation-timing-function: ease;
-        animation-delay:1s;
-        animation-iteration-count: 1;
-        animation-direction: normal;
-        animation-fill-mode: both;
-        animation-play-state: running;
-    }
+    animation-name: aparecer;
+    animation-duration: 0.8s;
+    animation-timing-function: ease;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    animation-play-state: running;
+}
 
-    .Main-content{
-        width: 100%;
-        /* min-height: 8rem; */
-        /* background-color: brown; */
+.Main-content {
+    width: 100%;
+    /* min-height: 8rem; */
+    /* background-color: brown; */
 
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items: center;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
 
-        margin: 0 0 3rem 0;
+    margin: 0 0 3rem 0;
 
-        animation-name: aparecer;
-        animation-duration: 0.8s;
-        animation-timing-function: ease;
-        animation-delay:1.2s;
-        animation-iteration-count: 1;
-        animation-direction: normal;
-        animation-fill-mode: both;
-        animation-play-state: running;
-    }
+    animation-name: aparecer;
+    animation-duration: 0.8s;
+    animation-timing-function: ease;
+    animation-delay: 1.2s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    animation-play-state: running;
+}
 
-    .Main-p{
-        width: 30%;
-        /* min-height: 2rem; */
-        /* background-color: khaki; */
+.Main-p {
+    width: 30%;
+    /* min-height: 2rem; */
+    /* background-color: khaki; */
 
-        font-family: var(--font-p);
-        font-size: 1rem;
-        font-style: normal;
-        font-weight: 500;
-        text-transform: uppercase;
-        text-align: center;
+    font-family: var(--font-p);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
 
-        color: var(--naranja);
+    color: var(--naranja);
 
-        margin: 0 auto 1rem;
-    }
+    margin: 0 auto 1rem;
+}
 
 /* Breakpoints Main */
-    @media screen and (max-width: 768px){
-        .Main-h2{ 
-            line-height: 1em;
-        }
-        .Main-p{
-            width: 60%;
-        }
+@media screen and (max-width: 768px) {
+    .Main-h2 {
+        line-height: 1em;
     }
-    @media screen and (max-width: 480px){
-        .Main-h2{ 
-            font-size: 8rem;
-        }
-        .Main-p{
-            width: 90%;
-        }
+
+    .Main-p {
+        width: 60%;
     }
+}
+
+@media screen and (max-width: 480px) {
+    .Main-h2 {
+        font-size: 8rem;
+    }
+
+    .Main-p {
+        width: 90%;
+    }
+}
 
 /* ----- Projects ----- */
-    .Projects{
-        width: 100%;
-        /* min-height: 150vh; */
-        /* background-color: lightgreen; */
-        margin-top: 6rem;
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items: center;
-    }
+.Projects {
+    width: auto;
+    /* min-height: 150vh; */
+    /* background-color: lightgreen; */
+    margin: 6rem 6rem 6rem 20rem;
 
-    .Project-title{
-        width: 100%;
-        position: relative;
-    }
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
 
-    .Projects-h2{
-        width: 100%;
-        /* min-height: 4rem; */
-        /* background-color: saddlebrown; */
+.Project-title {
+    width: 100%;
+    position: relative;
+}
 
-        margin:  0 auto 3rem 0;
-        
-        font-family: var(--font-p);
-        font-size: 1rem;
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
-        
-        border-radius: 2.5rem;
-        border: 1.5px solid var(--naranja);
-        padding: 0.5rem 1rem; 
+.Projects-h2 {
+    width: 100%;
+    /* min-height: 4rem; */
+    /* background-color: saddlebrown; */
 
-        color: var(--naranja);
-        text-transform: uppercase;
-    }
+    font-family: var(--font-p);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
 
-    /* .Projects-deco{
+    color: var(--naranja);
+    text-transform: uppercase;
+
+    padding: 1rem;
+}
+
+/* .Projects-deco{
         position: absolute;
         z-index: 1;
         right: 3rem;
         top: 6rem;
     } */
 
-    .Projects-container{
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: flex-start;
-        align-content: right;
+.Projects-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: center;
 
-        margin: 0 0 3rem 0;
+    margin: 0 0 rem 0;
+    padding: 0 3rem;
 
-        position: relative;
-    }
+
+    position: relative;
+}
+
+.Projects-list {}
+
+.Projects-single {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.Projects-a {
+
+    width: 40%;
     
-    .Projects-list{
-        gap: 2rem;
-    }
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
 
-    .Projecst-single{}
-    
-    .Projects-a{
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: flex-start;
-        align-items: flex-start;
-    
-        padding: 1rem 3rem;
-        transition: all 0.5s ease;
-        opacity: 1;
-    }
+    transition: all 0.5s ease;
+    opacity: 1;
 
-    .Projects-p{
-        font-family: var(--font-p);
-        font-size: 1rem;
-        font-style: normal;
-        font-weight: 500;
-        text-transform: uppercase;
-        text-align: center;
+    margin: 0 0 2rem 0;
+}
 
-        color: var(--naranja);
-    }
+.Projects-p {
+    font-family: var(--font-p);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
 
-    .Projects-h3{
-        font-family: var(--font-h);
-        font-size: 5rem;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        letter-spacing: -0.2rem;
+    color: var(--naranja);
+}
 
-        text-align: center;
-        text-transform: uppercase;
-        color:var(--naranja);
+.Project-image {
+    width: 70%;
+    min-height: 10rem;
+    background-color: lightblue;
 
-    }
+    border-radius: 2rem;
 
-    .Aboutme{
-        width: 90%; 
-        /* min-height: 34rem; */
-        /* background-color: purple; */
+    opacity: 1;
+}
 
-        border-radius: 2rem;
+.Project-image.isActive {
+    opacity: 1;
+}
 
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
-        align-content: center;
+.Projects-h3 {
+    font-family: var(--font-h);
+    font-size: 5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.2rem;
 
-        margin: 0 auto 2rem;
-    }
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--naranja);
+}
 
-    .Aboutme-img{
-        width: 50%;
-        /* min-height: 34rem; */
-        /* background-color: blanchedalmond; */
+.Projects-h3::after {
+    content: '';
+    display: block;
+    /* position: absolute; */
+    width: 100%;
+    height: 0.2rem;
+    bottom: 0;
+    left: 0;
 
-        object-fit: contain;
-        border-radius:2rem 0 0 2rem ;
-    }
+    background-color: var(--naranja);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.7s ease-out;
+}
 
-    .Aboutme-text{
-        width: 50%;
-        /* min-height: 34rem; */
-        background-color: var(--naranja);
+.Projects-h3:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
 
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items: left;
+.Aboutme {
+    width: 90%;
+    min-height: 15rem;
+    /* background-color: purple; */
 
-        padding: 3rem;
+    border-radius: 2rem;
 
-        border-radius: 0 2rem 2rem 0 ;
-    }
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: center;
 
-    .Aboutme-h3{
-        width: 80%;
-        /* min-height: 3rem; */
-        /* background-color: lightcoral; */
+    margin: 0 auto 2rem;
+}
 
-        margin: 0 0 3rem 2rem;
+.Aboutme-img {
+    width: 50%;
+    /* min-height: 34rem; */
+    /* background-color: blanchedalmond; */
 
-        font-size: 3.5rem;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 105%;
-        letter-spacing: -0.1rem;
+    object-fit: cover;
+    border-radius: 2rem 0 0 2rem;
+}
 
-        color: var(--salmon);
-    }
+.Aboutme-text {
+    width: 50%;
+    /* min-height: 34rem; */
+    background-color: var(--naranja);
 
-    .Aboutme-p{
-        width: 80%;
-        /* min-height: 3rem; */
-        /* background-color: red; */
+    padding: 3rem;
 
-        margin: 0 0 3rem 2rem;
+    border-radius: 0 2rem 2rem 0;
+}
 
-        font-size: 2rem;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 105%;
+.Aboutme-h3 {
+    width: 80%;
+    /* min-height: 3rem; */
+    /* background-color: lightcoral; */
 
-        color: var(--salmon);
-    }
+    margin: 0 0 3rem 2rem;
 
-    .Aboutme-a{
-        min-height: 2rem;
-        width: 20%;
-        background-color: var(--salmon);
-        border-radius: 2rem;
-        margin: 0 0 0 2rem;
+    font-size: 3.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 105%;
+    letter-spacing: -0.1rem;
 
-        text-align: center;
-        font-family: var(--font-p);
-        justify-content: center;
+    color: var(--salmon);
+}
 
-    }
+.Aboutme-p {
+    width: 80%;
+    /* min-height: 3rem; */
+    /* background-color: red; */
+
+    margin: 0 0 3rem 2rem;
+
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 105%;
+
+    color: var(--salmon);
+}
+
+.Aboutme-a {
+    min-height: 2rem;
+    width: 20%;
+    background-color: var(--salmon);
+    border-radius: 2rem;
+    margin: 0 0 0 2rem;
+
+    text-align: center;
+    font-family: var(--font-p);
+    justify-content: center;
+
+}
 
 /* Breakpoints Aboutme */
-    @media screen and (max-width: 768px){
-        .Aboutme-text{
-            width: 90%;
-        }
+@media screen and (max-width: 768px) {
+    .Aboutme-text {
+        width: 90%;
+    }
 
-        .Aboutme-img{
-            width: 90%;
-        }
+    .Aboutme-img {
+        width: 90%;
     }
-    @media screen and (max-width: 480px){
-        .Aboutme{
-            border-radius: 2rem ;
-        }    
+}
+
+@media screen and (max-width: 480px) {
+    .Aboutme {
+        border-radius: 2rem;
     }
+}
 
 /* ----- Contact ----- */
-    .Contact{
-        width: 100%;
-        /* min-height: 10rem; */
-        /* background-color: orangered; */
+.Contact {
+    width: 100%;
+    /* min-height: 10rem; */
+    /* background-color: orangered; */
 
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
-        align-items: center;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
 
-        padding: 3rem;
-    }
+    padding: 3rem;
+}
 
-    .Contact-h3{
-        /* width: 50%; */
-        /* min-height: 3rem; */
-        /* background-color: bisque; */
+.Contact-h3 {
+    /* width: 50%; */
+    /* min-height: 3rem; */
+    /* background-color: bisque; */
 
-        font-size: 9rem;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 105%;
-        letter-spacing: -0.5rem;
+    font-size: 9rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 105%;
+    letter-spacing: -0.5rem;
 
-        color: var(--naranja);
+    color: var(--naranja);
 
-        display: inline-block;
-        position: relative;
-    }
+    display: inline-block;
+    position: relative;
+}
 
 
-    .Contact-h3::after{
-        position: absolute;
-        width: 100%;
-        height: 0.3rem;
-        bottom: 0;
-        left: 0;
-    
-        background-color: var(--naranja);
-        transform: scaleX(0);
-        transform-origin: bottom right;
-        transition: transform 1s ease-out;
-    
-        content: '';
-        display:block;
-    }
-    
-    .Contact-h3:hover::after{
-        transform: scaleX(1);
-        transform-origin: bottom left;
-    }
+.Contact-h3::after {
+    position: absolute;
+    width: 100%;
+    height: 0.3rem;
+    bottom: 0;
+    left: 0;
 
-    .Contact-icon{
-        max-width: 9rem;
-    }
+    background-color: var(--naranja);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.7s ease-out;
 
-    .Contact-svg{        
-        /* min-height: 2rem; */
-        /* background-color: bisque; */
-        padding: 1rem;
-        stroke-width:"0.8";
-        color: var(--naranja);
-    }
+    content: '';
+    display: block;
+}
+
+.Contact-h3:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.Contact-icon {
+    max-width: 9rem;
+    scale: 1;
+    transition: scale 0.5 ease;
+}
+
+.Contact-svg {
+    /* min-height: 2rem; */
+    /* background-color: bisque; */
+    padding: 1rem;
+    stroke-width: "0.8";
+    color: var(--naranja);
+}
+
+.Contact-icon:hover {
+    scale: 1.1;
+}
 
 /* Breakpoints Contact */
-    @media screen and (max-width: 769px){
-        .Contact-h3{
-            font-size: 7rem;
-            letter-spacing: -0.2rem;
-        }
-     
+@media screen and (max-width: 769px) {
+    .Contact-h3 {
+        font-size: 7rem;
+        letter-spacing: -0.2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .Contact {
+        justify-content: center;
     }
 
-    @media screen and (max-width: 480px){
-        .Contact{
-            justify-content: center;
-        }
-        .Contact-h3{
-         font-size: 5rem;
-         letter-spacing: -0.2rem;
-         text-align: center;
-        }
-        .Contact-icon{
-            display: none;
-        }
+    .Contact-h3 {
+        font-size: 5rem;
+        letter-spacing: -0.2rem;
+        text-align: center;
     }
 
-
+    .Contact-icon {
+        display: none;
+    }
+}
