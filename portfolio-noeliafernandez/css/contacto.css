@@ -126,7 +126,10 @@
 }
 
 @media screen and (max-width: 480px) {
-  .Contacto .Main-h1 {
+  .Contacto .Main-titular{
+    margin: 0 auto;
+  }
+  .Contacto .Main-h2 {
     font-size: 5rem;
     letter-spacing: -0.3rem;
   }

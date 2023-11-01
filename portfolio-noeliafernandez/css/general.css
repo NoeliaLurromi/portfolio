@@ -151,6 +151,28 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body::-webkit-scrollbar {
+  width: 0.6em;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #ffcdc9;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--naranja);
+  border-radius: 2em;
+}
+
+/* .cursor{
+  position: fixed;
+  z-index: 5;
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--naranja);
+  border-radius: 50%;
+  pointer-events: none;
+} */
 
 
 /* ----- CUSTOM PROPERTIES ----- */
@@ -173,8 +195,7 @@ body {
   width: 100%;
   /* height: 4rem; */
   /* background: linear-gradient(360deg, rgba(255,255,255,0) 10%, rgba(255,242,241,1) 100%); */
-
-
+  position: sticky;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -191,7 +212,6 @@ body {
   animation-fill-mode: backwards;
   animation-play-state: running;
 
-  position: fixed;
   top: 0;
   z-index: 1;
 
@@ -268,54 +288,20 @@ body {
   color: var(--salmon);
 }
 
-
-/* Aquí empieza el menú para tablet y mobile */
-.Header-nav.Menu {
-  min-height: 100vh;
-  background-color: var(--naranja);
-
-  display: none;
-}
-
-.Header-ul.Menu {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-items: center;
-
-  text-align: center;
-  font-family: var(--font-h);
-
-  gap: 2rem;
-}
-
-.Header-li.Menu {}
-
-.Header-a.Menu {
-  font-family: var(--font-p);
-  font-size: 5rem;
-  font-style: var(--font-h);
-  line-height: 105%;
-
-  color: var(--salmon);
-  text-transform: uppercase;
-}
-
 /* Breakpoints Header */
 @media (max-width: 769px) {
 
   .Header {
     z-index: 1;
+    /* position: fixed; */
+    overflow: hidden;
   }
 
   .Header-nav {
     /* display: none; */
-    width: 100%;
-    position: absolute;
-    top: 8rem;
-    right: 0;
-
-    height: 0;
+    width: 100vw;
+    height: 100vh;
+ 
     overflow: hidden;
 
     display: none;
@@ -325,9 +311,9 @@ body {
   .Header-nav.isActive {
     display: block;
     height: 100vh;
-    /* background-color: orangered; */
+    background-color: var(--naranja);
 
-    top: 0;
+    top: 6rem;
     left: 0;
 
     position: absolute;
@@ -335,6 +321,8 @@ body {
     padding: 3rem;
 
     margin: 0 auto;
+
+    z-index: 2;
   }
 
   .Header-button {
@@ -344,14 +332,16 @@ body {
 
   .Header-ul {
     flex-direction: column;
+    margin: 0 auto;
   }
 
   .Header-a {
-    font-family: var(--font-h);
+    font-family: Salernomi J;
     font-size: 3rem;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     line-height: normal;
+    letter-spacing: -0.2rem;
 
     border-radius: 0;
     border: 0;
