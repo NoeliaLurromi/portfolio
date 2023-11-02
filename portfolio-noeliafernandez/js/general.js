@@ -1,23 +1,23 @@
 'use strict'
 
 // MENU HAMBURGUESA // 
-    // Cuando hago CLICK en .Header-button
-    //.Header-nav se le TOGGLE la clase isActive
+// Cuando hago CLICK en .Header-button
+//.Header-nav se le TOGGLE la clase isActive
 
 const headerButton = document.querySelector(`.Header-button`)
 const headerNav = document.querySelector(`.Header-nav`)
- 
-console.log( headerButton )
-console.log( headerNav )
 
-headerButton.addEventListener(`click` , () => {
+console.log(headerButton)
+console.log(headerNav)
+
+headerButton.addEventListener(`click`, () => {
     headerNav.classList.toggle(`isActive`)
 })
 
 
 // COMPORTAMIENTO DEL HEADER //
-    // Cuando hago MOUSEWHEEL hacia abajo (DELTAY +) el header le ADD la class .isHidden
-    // Cuando hago scroll hacia arriba (DELTAY -) el header le REMOVE la class .isHidden
+// Cuando hago MOUSEWHEEL hacia abajo (DELTAY +) el header le ADD la class .isHidden
+// Cuando hago scroll hacia arriba (DELTAY -) el header le REMOVE la class .isHidden
 
 // const header = document.querySelector(`.Header`)
 
@@ -42,35 +42,85 @@ const logo = document.querySelector(`.Header-logo`)
 const cortinillaNaranja = document.querySelector(`.Cortinilla-naranja`)
 const cortinillaSalmon = document.querySelector(`.Cortinilla-salmon`)
 
-console.log( enlaces )
-console.log( logo )
-console.log( cortinillaNaranja )
-console.log( cortinillaSalmon )
+console.log(enlaces)
+console.log(logo)
+console.log(cortinillaNaranja)
+console.log(cortinillaSalmon)
 
-enlaces.forEach(( eachEnlace , i) => {
-    enlaces[i].addEventListener(`click` , ( e ) => {
+enlaces.forEach((eachEnlace, i) => {
+    enlaces[i].addEventListener(`click`, (e) => {
         e.preventDefault()
 
         const href = enlaces[i].href
-        
+
         cortinillaNaranja.classList.add(`isActive`)
         setTimeout(() => {
-            window.location = href 
-        } ,500)
+            window.location = href
+        }, 600)
+    })
+})
+
+enlaces.forEach((eachEnlace, i) => {
+    enlaces[i].addEventListener(`click`, (e) => {
+        e.preventDefault()
+
+        const href = enlaces[i].href
+
+        cortinillaSalmon.classList.add(`isActive`)
+        setTimeout(() => {
+            window.location = href
+        }, 800)
     })
 })
 
 
 
 // APARTADO PROYECTOS HOME //
-    //Cuando hago MOUSEOVER en .Projects-single
-        // .Projects-image le ADD la clase isActive
-    // Cuando a .Projects-single MOUSEOUT
-        // .Projects-image le REMOVE la clase isActive
+//Cuando hago MOUSEOVER en .Projects-single
+// .Projects-image le ADD la clase isActive
+// Cuando a .Projects-single MOUSEOUT
+// .Projects-image le REMOVE la clase isActive
 
 const projects = document.querySelectorAll(`.Projects-single`)
 const images = document.querySelectorAll(`.Project-image`)
 
-console.log( projects )
-console.log( images )
+console.log(projects)
+console.log(images)
+
+
+
+// AQUI LAS IMAGENES DEL INDEX//
+
+const contenedor = document.querySelector(`.Project-img-container`)
+const enlacesProyecto = document.querySelectorAll(`.Projects-a`)
+
+
+let backgrounds = [
+    `url("../assets/diadelibro/lurromi-diadelibro-poster.jpg")`,
+    `url("../assets/diadelibro/lurromi-diadelibro-botella.jpg")`,
+]
+
+enlacesProyecto.forEach((eachEnlace, index) => {
+
+    enlacesProyecto[index].addEventListener(`mouseover`, () => {
+        contenedor.style.backgroundImage = backgrounds[index];
+        contenedor.style.backgroundRepeat = "no-repeat";
+        contenedor.style.backgroundSize= "contain";
+        contenedor.style.backgroundPosition= "right";
+        enlacesProyecto.forEach((eachEnlace, index) => {
+            enlacesProyecto[index].classList.add(`notHovering`)
+        })
+        enlacesProyecto[index].classList.remove(`notHovering`)
+        contenedor.classList.add(`isActive`)
+    })
+
+
+    enlacesProyecto[index].addEventListener(`mouseout`, () => {
+        contenedor.style.backgroundImage = backgrounds[4]
+        enlacesProyecto.forEach((eachEnlace, index) => {
+            enlacesProyecto[index].classList.remove(`notHovering`)
+        })
+        contenedor.classList.remove(`isActive`)
+    })
+});
 

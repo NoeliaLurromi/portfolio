@@ -1,8 +1,9 @@
-'@charset "UTF-8";
-
 /* DESCRIPCIÓN: Este archivo de CSS contiene:
 /* Este es el RESET */
-* {
+
+@charset "UTF-8";
+
+ * {
   margin: 0;
   padding: 0;
   border: 0;
@@ -18,7 +19,7 @@ video,
 iframe,
 figure {
   max-width: 100%;
-  width: 100%;
+  /* width: 100%; */
   display: block;
 }
 
@@ -197,6 +198,7 @@ body {
 
 .Header-img {
   max-height: 3rem;
+  width: 100%;
 }
 
 .Header-button {
@@ -326,11 +328,9 @@ body {
 
 .Project-main-image {
   width: 100%;
-  max-height: 50rem;
-  /* background-color: aliceblue; */
+  /* max-height: 50rem; */
 
   margin: 4rem 0;
-  border-radius: 2rem;
 
   display: flex;
   flex-flow: column nowrap;
@@ -338,17 +338,8 @@ body {
   align-items: center;
 }
 
-.Project-pack-images{
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-content: center;
-}
-.Project-img {
-  object-fit: contain;
-  border-radius: 2rem;
-
-  margin: 0 auto 3rem;
+.Project-main-image>.Project-img-all{
+ max-height: 100%;
 }
 
 .Project-description {
@@ -363,32 +354,30 @@ body {
 
   margin: 0 0 1rem 0;
 }
-
-.Projecst-images-one {
+.Project-images{
   width: 100%;
-  margin: 0 auto 3rem;
-  border-radius: 2rem;
-
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  gap:3rem;
+
+  margin: 0 auto 3rem;
 }
 
-.Project-images-two {
-  max-width: 50%;
+.Project-img-all{
   border-radius: 2rem;
-  min-height: 10rem;
-  position: relative;
-  top: 0;
-  left: 0;
-  margin: 0 auto 2rem;
+  max-height: 30rem;
 }
 
-.Project-img-two {
-  width: 90%;
-  object-fit: contain;
-  border-radius: 2rem;
+.Project-img-all.img-one{
+  /* width: 60%; */
+  max-height: 65rem;
+}
+
+.Project-img-all.img-half{
+  width: 45%;
 }
 
 .Project-next {
@@ -460,10 +449,6 @@ body {
     width: 80%;
   }
 
-  .Project-images-pair {
-    flex-flow: row wrap;
-  }
-
   .Project-img-little {
     width: 100%;
     margin: 0 0 2rem 0;
@@ -479,6 +464,12 @@ body {
 
   .Project-svg {
     display: none;
+  }
+  .Project-img-all{
+    border-radius: 1rem;
+  }
+  .Project-img-all.img-half{
+    width: 100%;
   }
 }
 
