@@ -33,9 +33,10 @@ headerButton.addEventListener(`click`, () => {
 // })
 
 
-
-
 // TRANSICIÓN ENTRE PÁGINAS //
+//Cuando hago click en un .Header-a
+//A .Cortinilla-naranja y a .Cortinilla-salmon les ADD la clase isActive
+//Para hacer una transición de colores entre páginas del nav
 
 const enlaces = document.querySelectorAll(`.Header-a`)
 const logo = document.querySelector(`.Header-logo`)
@@ -83,18 +84,13 @@ enlaces.forEach((eachEnlace, i) => {
 
 const projects = document.querySelectorAll(`.Projects-single`)
 const images = document.querySelectorAll(`.Project-image`)
+const contenedor = document.querySelector(`.Project-img-container`)
+const enlacesProyecto = document.querySelectorAll(`.Projects-a`)
 
 console.log(projects)
 console.log(images)
 
-
-
 // AQUI LAS IMAGENES DEL INDEX//
-
-const contenedor = document.querySelector(`.Project-img-container`)
-const enlacesProyecto = document.querySelectorAll(`.Projects-a`)
-
-
 let backgrounds = [
     `url("../assets/img-index/img-hover-penaclara.jpg")`,
     `url("../assets/img-index/img-hover-genderdesign.jpg")`,
