@@ -12,17 +12,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lurromi</title>
-    <link rel="stylesheet" href="css/proyectos.css">
-    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/index.css">
     <script defer src="js/general.js"></script>
-    <link rel="icon" type="image/png" href="assets/favicon-lurromi-web.png" />
+    <link rel="icon" type="image/png" href="assets/favicon-lurromi-web.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 </head>
 
-<body>
+<body class="Proyectos">
     <!-- Cortinillas entre páginas -->
     <div class="Cortinilla-naranja"></div>
     <div class="Cortinilla-salmon"></div>
@@ -36,8 +36,11 @@
                 </a>
             </h1>
 
-            <button class="Header-button">
-                <img class="Header-button" src="assets/burger-icon.png" alt="Menú hamburguesa">
+            <button class="Header-button" title="Menú hamburguesa">
+                <picture>
+                    <source srcset="assets/burger-icon.webp" type="img/webp">
+                    <img class="Header-button" src="assets/burger-icon.png" alt="Menú hamburguesa">
+                </picture>
             </button>
 
             <nav class="Header-nav">
@@ -59,31 +62,48 @@
     <!-- Sección proyectos -->
     <main class="Projects-main">
         <div class="Projects-title">
-            <h1 class="Projects-h1">Trabajos hechos con cabeza y diseñados con corazón </h1>
+            <h2 class="Projects-h2">Trabajos hechos con cabeza y diseñados con corazón </h2>
         </div>
         <div class="Projects-wrapper">
             <p class="Projects-p"> PROYECTOS (4)</p>
             <div class="Projects-container">
                 <a class="Projects-single" href="proyecto-penaclara.html">
                     <p class="Projects-text"> Peñaclara </p>
-                    <img src="assets/penaclara/lurromi-penaclara-gif.gif" class="Projects-img" alt="Proyecto Peñaclara" loading="lazy">
+                    <picture>
+                        <source srcset="assets/penaclara/lurromi-penaclara-gif-0.webp" type="img/webp">
+                        <source srcset="assets/penaclara/lurromi-penaclara-gif-0.png" type="img/png">
+                        <img src="assets/penaclara/lurromi-penaclara-gif.gif" class="Projects-img"
+                            alt="Proyecto Peñaclara" loading="lazy">
+                    </picture>
                 </a>
                 <div class="Projects-single">
                     <a class="Projects-single" href="proyecto-genderdesign.html">
                         <p class="Projects-text"> Gender Design </p>
-                        <img src="assets/genderdesign/lurromi-genderdesign-posters.webp" class="Projects-img" alt="Proyecto Gender Design" loading="lazy">
+                        <picture>
+                            <source srcset="assets/genderdesign/lurromi-genderdesign-posters.webp" type="img/webp">
+                            <img src="assets/genderdesign/lurromi-genderdesign-posters.jpg" class="Projects-img"
+                                alt="Proyecto Gender Design" loading="lazy">
+                        </picture>
                     </a>
                 </div>
                 <div class="Projects-single">
                     <a class="Projects-single" href="proyecto-esdirsign.html">
                         <p class="Projects-text"> Esdir Sign </p>
-                        <img src="assets/esdirsign/lurromi-esdirsign-tarjetass.jpg" class="Projects-img" alt="Proyecto Esdir Sign" loading="lazy">
+                        <picture>
+                            <source srcset="assets/genderdesign/lurromi-esdirsign-tarjetass.webp" type="img/webp">
+                            <img src="assets/esdirsign/lurromi-esdirsign-tarjetass.jpg" class="Projects-img"
+                                alt="Proyecto Esdir Sign" loading="lazy">
+                        </picture>
                     </a>
                 </div>
                 <div class="Projects-single">
-                    <a class="Projects-single" href="proyecto-esdirsign.html">
+                    <a class="Projects-single" href="proyecto-diadellibro.html">
                         <p class="Projects-text"> Día del libro </p>
-                        <img src="assets/diadelibro/lurromi-diadelibro-mockup-poster.webp" class="Projects-img" alt="Proyecto Día del Libro" loading="lazy">
+                        <picture>
+                            <source srcset="assets/genderdesign/lurromi-diadelibro-mockup-poster.webp" type="img/webp">
+                            <img src="assets/diadelibro/lurromi-diadelibro-mockup-poster.jpg" class="Projects-img"
+                                alt="Proyecto Día del Libro" loading="lazy">
+                        </picture>
                     </a>
                 </div>
             </div>

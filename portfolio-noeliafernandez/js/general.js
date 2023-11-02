@@ -96,8 +96,10 @@ const enlacesProyecto = document.querySelectorAll(`.Projects-a`)
 
 
 let backgrounds = [
-    `url("../assets/diadelibro/lurromi-diadelibro-poster.jpg")`,
-    `url("../assets/diadelibro/lurromi-diadelibro-botella.jpg")`,
+    `url("../assets/img-index/img-hover-penaclara.jpg")`,
+    `url("../assets/img-index/img-hover-genderdesign.jpg")`,
+    `url("../assets/img-index/img-hover-esdirsign.jpg")`,
+    `url("../assets/img-index/img-hover-diadelibro.jpg")`,
 ]
 
 enlacesProyecto.forEach((eachEnlace, index) => {

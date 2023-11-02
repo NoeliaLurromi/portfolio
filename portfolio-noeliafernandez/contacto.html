@@ -1,4 +1,4 @@
-<!-- DESCRIPCIÓN: Este archivo de HTML contiene el "contacto" del sitio web.
+<!-- DESCRIPCIÓN: Este archivo de HTML contiene la página "contacto" del sitio web.
     Su estructura es la siguiente:
     - Header con menú de navegación
     - Formas de contacto
@@ -12,13 +12,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lurromi</title>
-    <link rel="stylesheet" href="css/contacto.css">
-    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/index.css">
     <script defer src="js/general.js"></script>
     <link rel="icon" type="image/png" href="assets/favicon-lurromi-web.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 </head>
 
@@ -36,8 +36,11 @@
                 </a>
             </h1>
 
-            <button class="Header-button">
-                <img class="Header-button" src="assets/burger-icon.png" alt="Menú hamburguesa">
+            <button class="Header-button" title="Menú hamburguesa">
+                <picture>
+                    <source srcset="assets/burger-icon.webp" type="img/webp">
+                    <img class="Header-button" src="assets/burger-icon.png" alt="Menú hamburguesa">
+                </picture>
             </button>
 
             <nav class="Header-nav">
@@ -59,23 +62,32 @@
     <!-- Main -->
     <main class="Main">
         <div class="Main-titular">
-            <h1 class="Main-h2">Let's work together!</h1>
+            <h2 class="Main-h2">Let's work together!</h2>
         </div>
         <div class="Main-columnas">
             <section class="Main-columna">
-                <img class="Main-img Wiggle" src="assets/love-letter-icon.png" alt="Icono correo">
+                <picture>
+                    <source srcset="assets/love-letter-icon.webp">
+                    <img class="Main-img Wiggle" src="assets/love-letter-icon.png" alt="Icono correo" loading="lazy">
+                </picture>
                 <h2 class="Main-h3">E-MAIL</h2>
                 <a href="mailto:soylurromi@gmail.com" class="Main-p Purple"
                     title="Enviar mail a soylurromi@gmail.com">soylurromi@gmail.com</a>
             </section>
             <section class="Main-columna">
-                <img class="Main-img Wiggle" src="assets/explosion-icon.png" alt="Icono explosión">
-                <h2 class="Main-h3">REDES</h2>
+                <picture>
+                    <source srcset="assets/explosion-icon.webp">
+                    <img class="Main-img Wiggle" src="assets/explosion-icon.png" alt="Icono redes" loading="lazy">
+                </picture>
+                <h3 class="Main-h3">REDES</h3>
                 <p class="Main-p">Búscame como @lurromi</p>
             </section>
             <section class="Main-columna">
-                <img class="Main-img Wiggle" src="assets/coffee-icon.png" alt="Icono café">
-                <h2 class="Main-h3">CAFÉ</h2>
+                <picture>
+                    <source srcset="assets/coffee-icon.webp">
+                    <img class="Main-img Wiggle" src="assets/coffee-icon.png" alt="Icono café" loading="lazy">
+                </picture>
+                <h3 class="Main-h3">CAFÉ</h3>
                 <p class="Main-p">¡Charlamos y lo vemos!</p>
             </section>
         </div>

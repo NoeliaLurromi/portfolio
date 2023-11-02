@@ -13,16 +13,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lurromi</title>
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/general.css">
     <script defer src="js/general.js"></script>
-    <link rel="icon" type="image/png" href="assets/favicon-lurromi-web.png" />
+    <link rel="icon" type="image/png" href="assets/favicon-lurromi-web.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 </head>
 
-<body>
+<body class="Index">
     <!-- Cortinillas entre páginas -->
     <div class="Cortinilla-naranja"></div>
     <div class="Cortinilla-salmon"></div>
@@ -37,7 +37,10 @@
             </h1>
 
             <button class="Header-button" title="Menú hamburguesa">
-                <img class="Header-button" src="assets/burger-icon.png" alt="Menú hamburguesa">
+                <picture>
+                    <source srcset="assets/burger-icon.webp" type="img/webp">
+                    <img class="Header-button" src="assets/burger-icon.png" alt="Menú hamburguesa">
+                </picture>
             </button>
 
             <nav class="Header-nav">
@@ -55,21 +58,7 @@
             </nav>
         </div>
     </div>
-    <!-- Este es el menú que aparece en tablet y mobile
-        <nav class="Header-nav Menu">
-            <ul class="Header-ul Menu">
-                <li class="Header-li Menu">
-                    <a href="proyectos.html" class="Header-a Menu">Proyectos</a>
-                </li>
-                <li class="Header-li Menu">
-                    <a href="sobremi.html" class="Header-a Menu">Sobre mí</a>
-                </li>
-                <li class="Header-li Menu">
-                    <a href="contacto.html" class="Header-a Menu">Contacto</a>
-                </li>
-            </ul>
-        </nav>
-    </div> -->
+
 
     <!-- Contenido principal de la web -->
     <main class="Main">
@@ -86,10 +75,6 @@
 
         <!-- Sección proyectos -->
         <section class="Projects">
-            <!-- <div class="Projects-title">
-                    <h2 class="Projects-h2">(Proyectos seleccionados)</h2>
-                </div> -->
-
             <div class="Projects-container">
                 <ul class="Projects-list">
                     <li class="Projects-single">
@@ -117,20 +102,15 @@
                         </a>
                     </li>
                 </ul>
-                    <div class="Project-img-container">
-                        <!-- <img class="Project-image" href="assets/diadelibro/lurromi-diadelibro-poster.jpg" alt="Imagen proyecto"> -->
-                    </div>
+                <div class="Project-img-container"></div>
             </div>
-
-
-
         </section>
 
         <!-- Sección sobre mí -->
         <div class="About-container">
             <picture class="About-image">
-                <source srcset="assets/lurromi-about.webp" type="image/webp" />
-                <img class="About-img" src="assets/lurromi-about.jpg" alt="Imagen de Lurromi" />
+                <source srcset="assets/lurromi-about.webp" type="image/webp">
+                <img class="About-img" src="assets/lurromi-about.jpg" alt="Imagen de Lurromi">
             </picture>
             <div class="About-description">
                 <h3 class="About-h3">Behind the screen</h3>
