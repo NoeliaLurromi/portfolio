@@ -165,13 +165,12 @@ body::-webkit-scrollbar-thumb {
 /* ----- HEADER ----- */
 .Header {
   width: 100%;
-  /* height: 4rem; */
-  /* background: linear-gradient(360deg, rgba(255,255,255,0) 10%, rgba(255,242,241,1) 100%); */
+
   position: sticky;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  align-items: center;
+  align-content: center;
 
   padding: 0.5rem 2rem;
 
@@ -190,14 +189,12 @@ body::-webkit-scrollbar-thumb {
   transition: opacity 0.5s ease;
 }
 
-.Header.isHidden {
+/* .Header.isHidden {
   opacity: 0;
-}
+} */
 
 .Header-wrapper {
   width: 95%;
-  /* min-height: 4rem; */
-  /* background-color: rebeccapurple; */
   margin: 0 auto;
 
   display: flex;
@@ -226,7 +223,7 @@ body::-webkit-scrollbar-thumb {
 
 .Header-ul {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
 
@@ -266,14 +263,12 @@ body::-webkit-scrollbar-thumb {
     /* position: fixed; */
     overflow: hidden;
   }
-
+ .Header-wrapper{
+  flex-flow: row wrap;
+ }
   .Header-nav {
     display: none;
-    width: 100vw;
-    height: 100vh;
-
-    overflow: hidden;
-
+    width: 100%;
     transition: all 0.5s;
   }
 
@@ -282,14 +277,14 @@ body::-webkit-scrollbar-thumb {
     height: 100vh;
     background-color: var(--naranja);
 
-    top: 6rem;
+    /* top: 6rem;
     left: 0;
 
     position: absolute;
 
     padding: 3rem;
 
-    margin: 0 auto;
+    margin: 0 auto; */
   }
 
   .Header-button {
